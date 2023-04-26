@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+        <head>
+                <!-- Page information -->
+                <meta charset="UTF-8" />
+                <meta name="node_id" content="caracteristicas">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <link rel="shortcut icon" href="/favicon.ico" />
+
+                <!-- Set title -->
+                <title>api PySage50</title>
+
+                <!-- Includes -->
+                
+<script src="/obs.html/static/obsidian_core.js"></script>
+<script src="/obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="/obs.html/static/master.css" />
+<script src="/obs.html/static/mermaid.9.0.1.min.js"></script>
+<script>
+  MathJax = {
+    loader: {
+      load: [
+        '[tex]/action',
+        'output/chtml',
+        '[tex]/centernot'
+      ]
+    },
+    tex: {
+      inlineMath: [ ["\\(","\\)"] ],
+      displayMath: [ ["\\[","\\]"] ],
+      processEscapes: true,
+      processEnvironments: true,
+      packages: {'[+]': ['centernot']}
+    }
+  };
+</script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script src="/obs.html/static/flexsearch.bundle.js"></script>
+<script src="/obs.html/static/pako.js"></script>
+<script src="/obs.html/static/search.js"></script>
+<script src="/obs.html/static/dirtree.js"></script>
+
+
+                <!-- Onload tweaks -->
+                <script>
+                        const CURRENT_NODE = 'caracteristicas';
+                        const HTML_URL_PREFIX = '';
+                        const PAGE_DEPTH = 3;
+                </script>
+        </head>
+
+<body class="theme-obs-light">
+        <div id="antiflash" style="display: none;"></div>
+        <script>
+                document.getElementById('antiflash').style.display = 'block';
+        </script>
+        <div id="search-master-div">
+    <div id="search-slab" king_ramses="return the slaaab">
+            <div id="search-controls">
+                    <input id="search_string" placeholder="Type to search notes" type="text" />
+                    <div class="tooltip" style="display: none;">
+                        <input type="checkbox" id="hard_search" name="hard" />
+                        <span class="tooltiptext">Hard search (require exact match)</span>
+                    </div>
+                    <div id="search-results-box">
+                        <div id="search-results"></div>
+                    </div>
+                    <div id="search-instructions">
+                        <div class="prompt-instruction">
+                                <b>esc</b> to dismiss
+                        </div>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById("search-master-div").addEventListener('click', e => {
+            if(e.target !== e.currentTarget){
+                    return
+            }
+            toggle_id('search-master-div');
+    })
+    document.getElementById("search_string").addEventListener("input", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    }); 
+    document.getElementById("hard_search").addEventListener("click", function(event) {
+            setTimeout( () =>run_search('search_string', 'hard_search'), 100 );
+    });
+
+    window.addEventListener('keydown', e => {
+        if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27)){
+            toggle_id('search-master-div');
+            return false;
+        } 
+    }, true);
+
+    function click_list_link(element){
+        element.parentElement.getElementsByTagName('a')[0].click()
+    }
+</script>
+
+        <div id="page_holder" class="flex_col">
+                <div id="header" class="header">
+    <div id="header_flex" class="flex_row">
+            <a href="/index.html" id="homelink" title="Clear screen and go to homepage">api PySage50</a>
+            <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
+                    ≡
+            </div>
+            <div id="navbar" class="navbar requires_js">
+                    
+                    <div class="icon-tray">
+                            <div id="theme-button" class="theme-button requires_js" title="Change theme" onclick="toggle_theme_popup(this)">
+    T
+</div>
+<script>
+    function toggle_theme_popup(el){
+        // make theme button show that it's active by adding the .active class
+        toggle(el);
+
+        // show the theme selector
+        toggle_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            toggle(pu);
+        }
+    }
+
+    function disable_theme_popup(){
+        disable_id('theme-button');
+
+        // show the theme selector
+        disable_id('theme-popup')
+
+        let h2 = document.getElementById('header2')
+        if (h2){
+            let pu = document.getElementById('header2').getElementsByClassName('popup')[0];
+            disable(pu);
+        }
+    }
+</script>
+                                    <div onclick="openSearch()" class="theme-button requires_js">
+            <img src = "/obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+        </div>
+        <script>
+            function openSearch(){
+                // toggle search popup and continue with extra code if it is enabled this time
+                if (toggle_id('search-master-div')){
+                    // get input field and temporarily disable it
+                    let ss = document.getElementById('search_string');
+                    ss.value = 'Seach data initializing...';
+                    ss.readOnly = true; 
+
+                    // load search data if not yet done so
+                    setTimeout(function(){
+                        LoadSearchData()
+
+                        // clear input and put focus on it so that we can start typing immediately
+                        ss.value = '';
+                        ss.readOnly = false; 
+                        ss.focus()
+                        ss.select()
+                    }, 100);
+                }
+            }
+        </script>
+                            
+                                    <div >
+            <a id="dirtree_link" class="system-link" href="/obs.html/dir_index.html" title="View directory tree">
+                    <img src = "/obs.html/static/dirtree.svg" style="width: 12px; padding: 4px;" alt="Directory tree link"/>
+            </a>
+        </div>
+                            <div>
+    <a href="/obs.html/tags/index.html" title="Open tag view">
+            <img src = "/obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    </a>
+</div>
+                            
+                    </div>
+                    <div style="display: flex; flex-direction:column">
+                        <div id="left_pane_toggle_nav" class="left_pane_toggle_nav">Toggle Directory Tree Pane</div>
+                        <div id="right_pane_toggle_nav" class="right_pane_toggle_nav">Toggle Table of Contents Pane</div>
+                    </div>
+            </div>
+    </div>
+    <div class="popup" id="theme-popup">
+    <label for="cars">Theme </label>
+
+    <select name="theme" id="theme" onchange="set_theme(this.value)">
+      <option value="light">light</option>
+      <option value="obs-light" selected="selected">obsidian-light</option>
+      <option value="obs-dark">obsidian-dark</option>
+    </select> 
+</div>
+</div>
+                <div class="flex_row">
+                        <div id="left_pane" class="left_pane active">
+    <div id="left_pane_fold_header" class="left_pane_fold_header fold_header">x</div>
+    <div id="left_pane_content" class="left_pane_content">
+            <div class="dirtree"><button id="folder-1" class="dir-button" onclick="toggle_dir(this.id)">pySage50e</button>
+<div id="folder-container-1" class="dir-container requires_js active" path="/pySage50e">
+	<button id="folder-2" class="dir-button" onclick="toggle_dir(this.id)">documentos</button>
+	<div id="folder-container-2" class="dir-container requires_js " path="/pySage50e/documentos">
+		<ul class="dir-list">
+			<li><a class="" href="/pySage50e/documentos/Albaran venta.html"  >Albaran venta</a></li>
+			<li><a class="" href="/pySage50e/documentos/Pedido Venta.html"  >Pedido Venta</a></li>
+			<li><a class="" href="/pySage50e/documentos/Recursos Documentos.html"  >Recursos Documentos</a></li>
+			<li><a class="" href="/pySage50e/documentos/linea adicional con la descripcion larga.html"  >linea adicional con la descripcion larga</a></li>
+		</ul>
+	</div>
+	<button id="folder-3" class="dir-button" onclick="toggle_dir(this.id)">tablas</button>
+	<div id="folder-container-3" class="dir-container requires_js active" path="/pySage50e/tablas">
+		<button id="folder-4" class="dir-button" onclick="toggle_dir(this.id)">maestras</button>
+		<div id="folder-container-4" class="dir-container requires_js " path="/pySage50e/tablas/maestras">
+			<ul class="dir-list">
+				<li><a class="" href="/pySage50e/tablas/maestras/Clientes.html"  >Clientes</a></li>
+				<li><a class="" href="/pySage50e/tablas/maestras/Obras.html"  >Obras</a></li>
+				<li><a class="" href="/pySage50e/tablas/maestras/Productos.html"  >Productos</a></li>
+				<li><a class="" href="/pySage50e/tablas/maestras/Proveedores.html"  >Proveedores</a></li>
+			</ul>
+		</div>
+		<button id="folder-5" class="dir-button" onclick="toggle_dir(this.id)">vinculadas</button>
+		<div id="folder-container-5" class="dir-container requires_js active" path="/pySage50e/tablas/vinculadas">
+			<ul class="dir-list">
+				<li><a class="active" href="/pySage50e/tablas/vinculadas/Caracteristicas.html"  >Caracteristicas</a></li>
+				<li><a class="" href="/pySage50e/tablas/vinculadas/Familias.html"  >Familias</a></li>
+				<li><a class="" href="/pySage50e/tablas/vinculadas/Marcas.html"  >Marcas</a></li>
+				<li><a class="" href="/pySage50e/tablas/vinculadas/SubFamilias.html"  >SubFamilias</a></li>
+			</ul>
+		</div>
+		<ul class="dir-list">
+			<li><a class="" href="/pySage50e/tablas/Recursos Maestros.html"  >Recursos Maestros</a></li>
+			<li><a class="" href="/pySage50e/tablas/Tablas Relacionadas Recursos Maestros.html"  >Tablas Relacionadas Recursos Maestros</a></li>
+		</ul>
+	</div>
+	<ul class="dir-list">
+		<li><a class="" href="/pySage50e/Comienzo Rapido.html"  >Comienzo Rapido</a></li>
+	</ul>
+</div>
+<ul class="dir-list">
+	<li><a class="" href="/Documentacion SAGE tecnica.html"  >Documentacion SAGE tecnica</a></li>
+	<li><a class="" href="/index.html"  >Inicio</a></li>
+</ul>
+</div>
+    </div>
+</div>
+                        <div class="container">
+                                
+                <div style="width:100%; text-align: right;display: block;margin: 0.5rem;">
+                    <div style="flex:1;display: none;"></div>
+                    <div class="breadcrumbs" style="flex:1 ;padding: 0.5rem; width: fit-content;display: inline;border-radius: 0.2rem;">
+                        <a href="/" style="color: rgb(var(--normal-text-color));">Home</a> / <span style="color: #666;">pySage50e</span> / <span style="color: #666;">tablas</span> / <span style="color: #666;">vinculadas</span> / <a href="/pySage50e/tablas/vinculadas/Caracteristicas.html" >Caracteristicas</a>
+                    </div>
+                </div>
+<embeddedtitle>Caracteristicas</embeddedtitle>
+<div class="content"><p>CREA FAMILIA SI NO EXISTE   </p>
+<h1 id="ejemplo">Ejemplo</h1>
+<div class="toc">
+<ul>
+<li><a href="#ejemplo" class="anchor-link">Ejemplo</a><ul>
+<li><a href="#datos-sage50" class="anchor-link">Datos SAGE50</a></li>
+<li><a href="#datos-sql-base-datos-sage50" class="anchor-link">Datos SQL Base datos Sage50</a></li>
+</ul>
+</li>
+<li><a href="#comentarios" class="anchor-link">Comentarios</a></li>
+<li><a href="#endpoints" class="anchor-link">Endpoints</a></li>
+<li><a href="#recursos-api" class="anchor-link">Recursos Api</a><ul>
+<li><a href="#recursos-maestros" class="anchor-link">Recursos Maestros</a></li>
+<li><a href="#documentos" class="anchor-link">Documentos</a><ul>
+<li><a href="#ventas" class="anchor-link">Ventas</a></li>
+<li><a href="#compras" class="anchor-link">Compras</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#comienzo-uso-rapido" class="anchor-link">Comienzo uso rapido</a></li>
+<li><a href="#codigo-python-ejemplo" class="anchor-link">Codigo Python ejemplo</a></li>
+<li><a href="#configuracion-configsql-ini" class="anchor-link">Configuracion configsql.ini</a></li>
+<li><a href="#contrato-de-uso-api" class="anchor-link">Contrato de Uso  API</a></li>
+<li><a href="#metodo-generador" class="anchor-link">Metodo Generador</a></li>
+<li><a href="#metodo-extraer" class="anchor-link">Metodo Extraer</a></li>
+<li><a href="#metodo-creador-modificador" class="anchor-link">Metodo Creador / Modificador</a></li>
+</ul>
+</div>
+<div class="lang-ejemplo completo">
+```ejemplo completo
+import apiSage50
+api50=apiSage50.apiSage50()
+print(api50.feature())  
+print("---------------------------------")  
+print(api50.feature(campo))  
+print("---------------------------------")  
+print(api50.feature(cextraer='001'))
+
+<div class="codehilite"><pre><span></span><code><span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
+
+
+
+
+
+
+
+
+<span class="c1"># Visión general   </span>
+
+<span class="o">*</span><span class="n">BIENVENIDO</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="n">LA</span><span class="w"> </span><span class="n">DOCUMENTACIÓN</span><span class="w"> </span><span class="n">DE</span><span class="w"> </span><span class="n">API</span><span class="w"> </span><span class="n">PySage50e</span><span class="o">*</span><span class="w">   </span>
+
+<span class="n">Esta</span><span class="w"> </span><span class="n">nueva</span><span class="w"> </span><span class="n">versión</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">nuestra</span><span class="w"> </span><span class="n">Interfaz</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">Programación</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">Aplicaciones</span><span class="w"> </span><span class="p">(</span><span class="n">API</span><span class="p">)</span><span class="w"> </span><span class="n">representa</span><span class="w"> </span><span class="n">un</span><span class="w"> </span><span class="n">gran</span><span class="w"> </span><span class="n">paso</span><span class="w"> </span><span class="n">adelante</span><span class="o">.</span><span class="w"> </span><span class="n">Es</span><span class="w"> </span><span class="n">más</span><span class="w"> </span><span class="n">potente</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="n">fácil</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">usar</span><span class="o">.</span><span class="w"> </span><span class="n">Aquí</span><span class="w"> </span><span class="n">encontrarás</span><span class="w"> </span><span class="n">toda</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">orientación</span><span class="w"> </span><span class="n">que</span><span class="w"> </span><span class="n">necesitas</span><span class="w"> </span><span class="n">para</span><span class="w"> </span><span class="n">crear</span><span class="w"> </span><span class="n">integraciones</span><span class="w"> </span><span class="n">entre</span><span class="w"> </span><span class="n">Sage50</span><span class="w"> </span><span class="n">españa</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="p">[</span><span class="n">Python</span><span class="w"> </span><span class="n">Release</span><span class="w"> </span><span class="n">Python</span><span class="w"> </span><span class="mf">3.11</span><span class="o">.</span><span class="mi">3</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Python</span><span class="o">.</span><span class="n">org</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">downloads</span><span class="o">/</span><span class="n">release</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="mi">3113</span><span class="o">/</span><span class="p">)</span><span class="w">     </span>
+
+<span class="c1"># Documentacion   </span>
+
+
+<span class="c1"># URL   </span>
+
+<span class="p">[</span><span class="n">api</span><span class="w"> </span><span class="n">dll</span><span class="w"> </span><span class="n">sage</span><span class="w"> </span><span class="n">Sage50</span><span class="p">:</span><span class="w"> </span><span class="n">Página</span><span class="w"> </span><span class="n">principal</span><span class="p">](</span><span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">descargas</span><span class="o">.</span><span class="n">sage</span><span class="o">.</span><span class="n">es</span><span class="o">/</span><span class="n">Sage50</span><span class="o">/</span><span class="n">Documentacion_html</span><span class="o">/</span><span class="n">html</span><span class="o">/</span><span class="p">)</span><span class="w">   </span>
+<span class="p">[</span><span class="n">Estructura</span>\<span class="n">_db</span>\<span class="n">_Sage50</span><span class="o">.</span><span class="n">xlsx</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">view</span><span class="o">.</span><span class="n">officeapps</span><span class="o">.</span><span class="n">live</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">op</span><span class="o">/</span><span class="n">view</span><span class="o">.</span><span class="n">aspx</span><span class="err">?</span><span class="n">src</span><span class="o">=</span><span class="n">https</span><span class="o">%</span><span class="mi">3</span><span class="n">A</span><span class="o">%</span><span class="mi">2</span><span class="n">F</span><span class="o">%</span><span class="mi">2</span><span class="n">Fsage50c</span><span class="o">.</span><span class="n">sage</span><span class="o">.</span><span class="n">es</span><span class="o">%</span><span class="mi">2</span><span class="n">Fhelp50c</span><span class="o">%</span><span class="mi">2</span><span class="n">FEstructura_db_Sage50</span><span class="o">.</span><span class="n">xlsx</span><span class="o">&amp;</span><span class="n">wdOrigin</span><span class="o">=</span><span class="n">BROWSELINK</span><span class="p">)</span>
+
+
+
+<span class="c1"># Requisitos Previos   </span>
+
+
+<span class="c1">#### Python  version 3.11   </span>
+<span class="p">[</span><span class="n">Python</span><span class="w"> </span><span class="n">Release</span><span class="w"> </span><span class="n">Python</span><span class="w"> </span><span class="mf">3.11</span><span class="o">.</span><span class="mi">3</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Python</span><span class="o">.</span><span class="n">org</span><span class="p">](</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">downloads</span><span class="o">/</span><span class="n">release</span><span class="o">/</span><span class="n">python</span><span class="o">-</span><span class="mi">3113</span><span class="o">/</span><span class="p">)</span><span class="w">   </span>
+
+
+<span class="o">&gt;</span><span class="p">[</span><span class="o">!</span><span class="n">error</span><span class="p">]</span><span class="w"> </span><span class="n">Nota</span><span class="w"> </span><span class="n">importante</span><span class="w">   </span>
+<span class="o">&gt;</span><span class="w">    </span><span class="o">**</span><span class="n">Python</span><span class="w"> </span><span class="mf">3.10</span><span class="o">.</span><span class="mi">11</span><span class="w">  </span><span class="n">no</span><span class="w"> </span><span class="n">es</span><span class="w"> </span><span class="n">compatible</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="n">Windows</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="n">inferior</span><span class="w">   </span>
+
+
+
+
+<span class="c1">#### Instalacion de la Libreria    </span>
+
+<span class="o">&lt;</span><span class="n">div</span><span class="w"> </span><span class="k">class</span><span class="o">=</span><span class="s2">&quot;lang-terminal_windows&quot;</span><span class="o">&gt;</span>
+<span class="err">```</span><span class="w"> </span><span class="n">terminal_windows</span>
+<span class="n">pip</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">apiSage50e</span>
+</code></pre></div>
+
+
+</div>
+
+<p><em>Debe conocer y tener acceso desde su terminal a:</em>   </p>
+<h4 id="datos-sage50">Datos SAGE50</h4>
+<ul>
+<li>Ubicacion Teminal Sage50 para el <a href="/not_created.html" class="nonexistent-link">grupo de empresa</a>  a procesar   </li>
+<li>usuario_sage50   </li>
+<li>clave_sage50   </li>
+<li>empresa_sage50   </li>
+</ul>
+<h4 id="datos-sql-base-datos-sage50">Datos SQL Base datos Sage50</h4>
+<ul>
+<li>Direccion servidor MSSQL<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>   </li>
+<li>Nombre Usuario  MSSQL<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup>   </li>
+<li>Password MSSQL<sup id="fnref3:1"><a class="footnote-ref" href="#fn:1">1</a></sup>   </li>
+</ul>
+<h1 id="comentarios">Comentarios</h1>
+<p>Tu opinión es <em>importante</em>, dinos qué quieres <mark class="formatting_highlight">conseguir con esta API</mark> y te ayudamos con ello desde <a href="/not_created.html" class="nonexistent-link">Alcatic</a>.   </p>
+<h1 id="endpoints">Endpoints</h1>
+<p>La API PySage50e está diseñada en torno al concepto de recursos.   <br />
+Un "recurso" está relacionado con una entidad dentro de Sage50. <br />
+Es posible que ya conozcas estos recursos como Clientes, Articulos, Proveedores, Obras, etc.   <br />
+Los endpoints están disponibles a través de la API.  <br />
+Pueden ser acciones como recuperar una registro, actualizar un Contacto. Cada recurso tiene su propio punto final que se utiliza para recibir datos para un recurso en particular.  <br />
+Los endpoints realizan una función específica, tomando un cierto número de parámetros y devolviendo datos.     </p>
+<h1 id="recursos-api">Recursos Api</h1>
+<h2 id="recursos-maestros">Recursos Maestros</h2>
+<ul>
+<li><a href="/pySage50e/tablas/maestras/Productos.html">Productos</a> 👍   </li>
+<li><a href="/pySage50e/tablas/maestras/Clientes.html">Clientes</a> 👍   </li>
+<li><a href="/pySage50e/tablas/maestras/Proveedores.html">Proveedores</a> 👍   </li>
+<li><a href="/pySage50e/tablas/maestras/Obras.html">Obras</a> 👍</li>
+</ul>
+<h2 id="documentos">Documentos</h2>
+<h3 id="ventas">Ventas</h3>
+<ul>
+<li><a href="/not_created.html" class="nonexistent-link">Presupuesto Venta</a>   </li>
+<li><a href="/pySage50e/documentos/Pedido%20Venta.html">Pedido Venta</a>   </li>
+<li><a href="/pySage50e/documentos/Albaran%20venta.html">Albaran venta</a>   </li>
+<li><a href="/not_created.html" class="nonexistent-link">Factura Venta</a>   </li>
+</ul>
+<h3 id="compras">Compras</h3>
+<ul>
+<li><a href="/not_created.html" class="nonexistent-link">Presupuesto Compra</a>   </li>
+<li><a href="/not_created.html" class="nonexistent-link">Pedido Compra</a>   </li>
+<li><a href="/not_created.html" class="nonexistent-link">Albaran Compra</a></li>
+</ul>
+<h1 id="comienzo-uso-rapido">Comienzo uso rapido</h1>
+<h1 id="codigo-python-ejemplo">Codigo Python ejemplo</h1>
+<div class="lang-py">
+
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">apiSage50</span>
+<span class="n">api50</span> <span class="o">=</span> <span class="n">apiSage50</span><span class="o">.</span><span class="n">apiSage50</span><span class="p">()</span>
+</code></pre></div>
+
+
+</div>
+
+<h1 id="configuracion-configsql-ini">Configuracion configsql.ini</h1>
+<blockquote>
+<p><strong>obsidian-html error:</strong> Could not find page Fichero configsql.ini.   </p>
+</blockquote>
+<h1 id="contrato-de-uso-api">Contrato de Uso  API</h1>
+<blockquote>
+<p><strong>obsidian-html error:</strong> Could not find page Contrato TRIAL.</p>
+</blockquote>
+<h1 id="metodo-generador">Metodo Generador</h1>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>api50.feature()
+&#39;Codigo&#39;: &#39;xxxxxx&#39; 
+lo actualiza sino lo crear si no existe.
+</code></pre></div>
+
+
+</div>
+
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>{&#39;Codigo&#39;: &#39;&#39;, &#39;Nombre&#39;: &#39;&#39;}
+</code></pre></div>
+
+
+</div>
+
+<h1 id="metodo-extraer">Metodo Extraer</h1>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>api50.feature(cextraer=&#39;xxxxxxx&#39;)
+</code></pre></div>
+
+
+</div>
+
+<h1 id="metodo-creador-modificador">Metodo Creador / Modificador</h1>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>api50.feature(campo)
+</code></pre></div>
+
+
+</div>
+
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>(Datos generados con la configuracion habitual)&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 0 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 0 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 0 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></div>
+<div class="note-footer">
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="/pySage50e/tablas/maestras/Obras.html">obras</a></li>
+	<li><a class="backlink" href="/pySage50e/tablas/maestras/Proveedores.html">proveedores</a></li>
+	<li><a class="backlink" href="/pySage50e/tablas/maestras/Clientes.html">clientes</a></li>
+	<li><a class="backlink" href="/pySage50e/tablas/maestras/Productos.html">productos</a></li>
+</ul>
+</div>
+
+<div class="tags">
+
+</div>
+
+</div>
+
+                                <!-- end content -->
+                        </div>
+                        <div class="container_filler">
+                        </div>
+                        <div id="right_pane" class="right_pane active">
+    <div id="right_pane_fold_header" class="right_pane_fold_header fold_header">x</div>
+    <div id="right_pane_content" class="right_pane_content">
+            
+    </div>
+</div>
+                </div>
+        </div>
+
+        <script>
+                function handle_toggle_side_bar(e){
+                        let header;
+                        let pane; 
+                        let target = e.target
+
+                        // switch out the navbar button click for a header click
+                        if (target.id == 'left_pane_toggle_nav'){
+                                target = document.getElementById('left_pane_fold_header')
+                        }
+                        else if (target.id == 'right_pane_toggle_nav'){
+                                target = document.getElementById('right_pane_fold_header')
+                        }
+
+                        // get header and pane
+                        if (target.classList.contains('fold_header')) {
+                                header = target;
+                                pane = target.parentElement;
+                        }
+                        else {
+                                pane = target;
+                                header = target.getElementsByClassName('fold_header')[0];
+                        }
+                        toggle_side_bar(pane, header, true)
+                        e.stopPropagation();
+                }
+                function handle_toggle_side_bar_button(e){
+                        document.getElementById('menu_toggle_button').click()
+                        handle_toggle_side_bar(e);
+                }
+
+                function toggle_side_bar(pane, header, save) {
+                        let active = (pane.classList.contains('active'))
+                        if (active){
+                                disable_side_bar(pane, header, save);
+                        }
+                        else {
+                                enable_side_bar(pane, header, save);
+                        }
+                }
+                function enable_side_bar(pane, header, save){
+                        pane.classList.add('active');
+                        pane.removeEventListener('click', handle_toggle_side_bar);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, true) }
+                }
+                function disable_side_bar(pane, header, save){
+                        pane.classList.remove('active');
+                        pane.addEventListener('click', handle_toggle_side_bar);
+                        header.removeEventListener('click', handle_toggle_side_bar);
+                        set_correct_header_symbol(header);
+                        if (save){ save_panel_folding_state(header, false) }
+                }
+                function set_correct_header_symbol(header){
+                        let pane = header.parentElement;
+                        let symbol = [['>', '<'],['<', '>']]
+                        symbol = symbol[Number(header.classList.contains('right_pane_fold_header'))][Number(pane.classList.contains('active'))];
+                        console.log(symbol);
+                        header.innerHTML = symbol
+                        return header;
+                }
+                function panel_folding_get_panel_name(header){
+                        return ['left', 'right'][Number(header.classList.contains('right_pane_fold_header'))]
+                }
+                function save_panel_folding_state(header, active){
+                        ls_set('pane_folding_state_'+panel_folding_get_panel_name(header), Number(active));
+                }
+                function load_panel_folding_state(panel_name){
+                        val = ls_get('pane_folding_state_'+panel_name)
+                        if (!val){ return {'exists': false, 'value': null}}
+                        return {'exists': true, 'value': Boolean(Number(val))}
+                }
+                function set_pane_folding_start(left_header, right_header){
+                        // small screen = closed
+                        let right_pane_enabled = true;
+                        let left_pane_enabled = true;
+                        let w = window.visualViewport.width
+                        if (w < 1000){
+                                left_pane_enabled = false
+                        }
+                        if (w < 800){
+                                right_pane_enabled = false
+                        }
+
+                        // get saved values if present
+                        let rval = load_panel_folding_state('right')
+                        if (rval['exists']){
+                                right_pane_enabled = rval['value']
+                        }
+                        let lval = load_panel_folding_state('left')
+                        if (lval['exists']){
+                                left_pane_enabled = lval['value']
+                        }
+
+                        // default = enabled, so we only need to disable
+                        if (!left_pane_enabled){
+                                disable_side_bar(document.getElementById('left_pane'), document.getElementById('left_pane_fold_header'))
+                        }
+                        if (!right_pane_enabled){
+                                disable_side_bar(document.getElementById('right_pane'), document.getElementById('right_pane_fold_header'))
+                        }
+                }
+
+                function init_pane_folding(header){
+                        set_correct_header_symbol(header);
+                        header.addEventListener('click', handle_toggle_side_bar);
+                }
+                
+                
+                set_pane_folding_start()
+                init_pane_folding(document.getElementById('left_pane_fold_header'));
+                init_pane_folding(document.getElementById('right_pane_fold_header'));
+
+                document.getElementById('left_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+                document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
+        </script>
+
+        <script src="/obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+
+        
+
+
+
+
+</body>
+</html>
