@@ -42,8 +42,6 @@ if __name__ == "__main__":
     api50 = apiSage50.apiSage50()
 
 
-    ## genera los campos disponibles
-    print(api50.product())
 
     ''''
     ALTA
@@ -56,11 +54,13 @@ if __name__ == "__main__":
     '''
 
 
-    ## ver documento Articulo.txt
-    articulominimo = {'Codigo': 'prueba', 'Nombre': 'prueba nombre', 'Abrev': '', 'Familia': '001',  'Tipo_Iva': '03'}
-
     ## alta con campos minimos
+    articulominimo = {'Codigo': 'prueba', 'Nombre': 'prueba nombre', 'Familia': '01',  'Tipo_Iva': '03'}
     print(api50.product(articulominimo))
+
+    '''
+    tablas relacionadas
+    '''
     ##alta oferta
     articulo_tablarelacionada= {'Codigo': 'prueba', '_Ofertas#Tarifa': 'TD',}
     print(api50.product(articulo_tablarelacionada))
@@ -74,11 +74,11 @@ if __name__ == "__main__":
     print(api50.product(articulo_tablarelacionada))
 
     ##alta tarifa_proveedores
-    articulo_tablarelacionada= {'Codigo': 'prueba',  '_Referencias#Proveedor': '40000001', '_Referencias#Referencia': 'codiprovee', '_Referencias#Pcompra': 10}
+    articulo_tablarelacionada= {'Codigo': 'prueba',  '_Referencias#Proveedor': '400000001', '_Referencias#Referencia': 'codiprovee', '_Referencias#Pcompra': 10}
     print(api50.product(articulo_tablarelacionada))
 
     ##alta Stock Minimo_Maximo
-    articulo_tablarelacionada= {'Codigo': 'prueba',  "_StockMaxMinAlmacen#Maximo": 100.0, '_StockMaxMinAlmacen#Minimo': 10.0,}
+    articulo_tablarelacionada= {'Codigo': 'prueba',  "_StockMaxMinAlmacen#almacen": "01", "_StockMaxMinAlmacen#Maximo": 100.0, '_StockMaxMinAlmacen#Minimo': 10.0,}
     print(api50.product(articulo_tablarelacionada))
 
     ##alta Imagenes/Documentos
@@ -86,7 +86,7 @@ if __name__ == "__main__":
     print(api50.product(articulo_tablarelacionada))
 
     ##alta campos libres
-    articulo_tablarelacionada= {'Codigo': 'prueba',  '_ListCamposAdicionales#Campo': 'test' , '_ListCamposAdicionales#Valor': 'test valor'   }
+    articulo_tablarelacionada= {'Codigo': 'prueba',  '_ListCamposAdicionales#Campo': '001' , '_ListCamposAdicionales#Valor': 'test valor'   }
     print(api50.product(articulo_tablarelacionada))
 
     ##alta Escandadallos
@@ -102,14 +102,23 @@ if __name__ == "__main__":
     Devuelve lista registro cumple 
     '''
 
-    lista=api50.product(sql="Familia='000'")
-
+    lista=api50.product(wlista="Familia='01'")
+    print(lista)
     ''''
         Extrae  
         Devuelve JSON con las registro en la tablas relacionas
     '''
 
-    if len(lista)>0:
-        for reg  in lista:
-            print(api50.product(cextrae=reg))
 
+
+    if len(lista)>0:
+        for reg  in lista[0]:
+            json=api50.product(cextraer=reg["Codigo"])
+            print(json)
+
+
+    ## genera los campos disponibles
+    #
+    print(api50.product())
+
+    ## ver documento Articulo.txt
