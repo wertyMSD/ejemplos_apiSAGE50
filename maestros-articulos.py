@@ -96,7 +96,7 @@ if __name__ == "__main__":
 
     ''''
     LISTADO 
-    Devuelve lista registro cumple 
+    Devuelve lista registro que lo cumple condicion. Si esta vacion son todos los registros 
     '''
 
     lista=api50.product(wlista="Familia='01'")
