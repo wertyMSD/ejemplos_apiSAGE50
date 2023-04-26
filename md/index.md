@@ -4,9 +4,9 @@ obs.html.data:
   inclusion_references:
   - documentacion sage tecnica.md
   - cython py.md
-  - 100_proyectos/sage50/pysage50e/comienzo rapido.md
-  - 100_proyectos/sage50/pysage50e/tablas/recursos maestros.md
-  - 100_proyectos/sage50/pysage50e/documentos/recursos documentos.md
+  - pysage50e/comienzo rapido.md
+  - pysage50e/tablas/recursos maestros.md
+  - pysage50e/documentos/recursos documentos.md
 tags:
 - apisage50
 - PY
@@ -95,10 +95,10 @@ Los endpoints realizan una función específica, tomando un cierto número de pa
 
    
    
-- [Productos](./100_Proyectos/Sage50/pySage50e/tablas/maestras/Productos.md) 👍   
-- [Clientes](./100_Proyectos/Sage50/pySage50e/tablas/maestras/Clientes.md) 👍   
-- [Proveedores](./100_Proyectos/Sage50/pySage50e/tablas/maestras/Proveedores.md) 👍   
-- [Obras](./100_Proyectos/Sage50/pySage50e/tablas/maestras/Obras.md) 👍
+- [Productos](./pySage50e/tablas/maestras/Productos.md) 👍   
+- [Clientes](./pySage50e/tablas/maestras/Clientes.md) 👍   
+- [Proveedores](./pySage50e/tablas/maestras/Proveedores.md) 👍   
+- [Obras](./pySage50e/tablas/maestras/Obras.md) 👍
    
    
    
@@ -108,8 +108,8 @@ Los endpoints realizan una función específica, tomando un cierto número de pa
 ### Ventas   
    
 -  [Presupuesto Venta](/not_created.md)   
--  [Pedido Venta](./100_Proyectos/Sage50/pySage50e/documentos/Pedido%20Venta.md)   
--  [Albaran venta](./100_Proyectos/Sage50/pySage50e/documentos/Albaran%20venta.md)   
+-  [Pedido Venta](./pySage50e/documentos/Pedido%20Venta.md)   
+-  [Albaran venta](./pySage50e/documentos/Albaran%20venta.md)   
 -  [Factura Venta](/not_created.md)   
    
 ### Compras   
