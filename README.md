@@ -6,7 +6,7 @@ Alias:
 
 *BIENVENIDO A LA DOCUMENTACIÓN DE API PySage50e*
 
-Esta nueva versión de nuestra Interfaz de Programación de Aplicaciones (API) representa un gran paso adelante. Es más potente y fácil de usar. Aquí encontrarás toda la orientación que necesitas para crear integraciones entre Sage50 españa y [Python version 3.10 ](https://www.python.org/downloads/release/python-3100/)  
+Esta nueva versión de nuestra Interfaz de Programación de Aplicaciones (API) representa un gran paso adelante. Es más potente y fácil de usar. Aquí encontrarás toda la orientación que necesitas para crear integraciones entre Sage50 españa y [Python version 3.11 ](https://www.python.org/downloads/release/python-3110/)  
 
 # Documentacion
 
