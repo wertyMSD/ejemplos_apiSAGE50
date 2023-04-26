@@ -10,7 +10,7 @@ Esta nueva versión de nuestra Interfaz de Programación de Aplicaciones (API) r
 
 # Documentacion
 
-https://wertymsd.github.io/ejemplos_apiSAGE50/pySage50e/tablas/maestras/Productos.html
+https://wertymsd.github.io/ejemplos_apiSAGE50
 
 # Requisitos Previos
 
