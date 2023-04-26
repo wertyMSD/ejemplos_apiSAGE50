@@ -54,46 +54,43 @@ if __name__ == "__main__":
     '''
 
 
-    ## alta con campos minimos
+    print("Alta con campos minimos")
     articulominimo = {'Codigo': 'prueba', 'Nombre': 'prueba nombre', 'Familia': '01',  'Tipo_Iva': '03'}
     print(api50.product(articulominimo))
 
     '''
     tablas relacionadas
     '''
-    ##alta oferta
+    print("Alta oferta _Ofertas")
     articulo_tablarelacionada= {'Codigo': 'prueba', '_Ofertas#Tarifa': 'TD',}
     print(api50.product(articulo_tablarelacionada))
 
-    ##alta precios
+    print("Alta precios _Precios")
     articulo_tablarelacionada= {'Codigo': 'prueba', '_Precios#Tarifa': 'TD', '_Precios#Pvp': 100 }
     print(api50.product(articulo_tablarelacionada))
 
-    ##alta oferta
-    articulo_tablarelacionada= {'Codigo': 'prueba', '_Ofertas#Tarifa': 'TD',}
-    print(api50.product(articulo_tablarelacionada))
 
-    ##alta tarifa_proveedores
+    print("Alta tarifa_proveedores _Referencias")
     articulo_tablarelacionada= {'Codigo': 'prueba',  '_Referencias#Proveedor': '400000001', '_Referencias#Referencia': 'codiprovee', '_Referencias#Pcompra': 10}
     print(api50.product(articulo_tablarelacionada))
 
-    ##alta Stock Minimo_Maximo
+    print("Alta Stock Minimo_Maximo _StockMaxMinAlmacen")
     articulo_tablarelacionada= {'Codigo': 'prueba',  "_StockMaxMinAlmacen#almacen": "01", "_StockMaxMinAlmacen#Maximo": 100.0, '_StockMaxMinAlmacen#Minimo': 10.0,}
     print(api50.product(articulo_tablarelacionada))
 
-    ##alta Imagenes/Documentos
-    articulo_tablarelacionada= {'Codigo': 'prueba',  '_Imagenes#Imagen': 'articulos.txt'}
+    print("Alta Imagenes/Documentos _Imagenes")
+    articulo_tablarelacionada= {'Codigo': 'prueba',  '_Imagenes#Imagen': 'E:\@github\ejemplos_apiSAGE50\Articulo.txt'}
     print(api50.product(articulo_tablarelacionada))
 
-    ##alta campos libres
+    print("Alta campos libres _ListCamposAdicionales")
     articulo_tablarelacionada= {'Codigo': 'prueba',  '_ListCamposAdicionales#Campo': '001' , '_ListCamposAdicionales#Valor': 'test valor'   }
     print(api50.product(articulo_tablarelacionada))
 
-    ##alta Escandadallos
-    articulo_tablarelacionada = {'Codigo': 'prueba', '_Escandallos#Componente': '1' ,'_Escandallos#Unidades': 10   }
+    print("Alta Escandadallos _Escandallo") # todo por hacer
+    articulo_tablarelacionada = {'Codigo': 'prueba', '_Escandallos#Componente': '1' ,'_Escandallos#Unidades': 10 ,'_Escandallos#Campo':"hola"  }
     print(api50.product(articulo_tablarelacionada))
 
-    ##alta Idioma
+    print("Alta Idioma _Idiomas ")
     articulo_tablarelacionada = {'Codigo': 'prueba','_Idiomas#Idioma': 'ING'  , '_Idiomas#Definicion': 'Test'}
     print(api50.product(articulo_tablarelacionada))
 
@@ -109,16 +106,15 @@ if __name__ == "__main__":
         Devuelve JSON con las registro en la tablas relacionas
     '''
 
-
-
     if len(lista)>0:
         for reg  in lista[0]:
-            json=api50.product(cextraer=reg["Codigo"])
-            print(json)
+            ajson=api50.product(cextraer=reg["Codigo"])
+
+        print(json.loads(ajson[0]))
 
 
     ## genera los campos disponibles
     #
-    print(api50.product())
+    # print(api50.product())
 
     ## ver documento Articulo.txt
