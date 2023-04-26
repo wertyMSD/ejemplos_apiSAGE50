@@ -13,3 +13,6 @@
 /documentacion/html/
 /config.yml
 /manual.bat
+/.idea/
+/.gitignore
+/md/
