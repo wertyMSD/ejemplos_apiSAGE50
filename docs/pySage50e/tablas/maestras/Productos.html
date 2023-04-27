@@ -231,8 +231,19 @@
 				<li><a class="" href="../pySage50e/tablas/maestras/Proveedores.html"  >Proveedores</a></li>
 			</ul>
 		</div>
-		<button id="folder-6" class="dir-button" onclick="toggle_dir(this.id)">vinculadas</button>
-		<div id="folder-container-6" class="dir-container requires_js " path="../pySage50e/tablas/vinculadas">
+		<button id="folder-6" class="dir-button" onclick="toggle_dir(this.id)">relacionadas</button>
+		<div id="folder-container-6" class="dir-container requires_js " path="../pySage50e/tablas/relacionadas">
+			<ul class="dir-list">
+				<li><a class="" href="../pySage50e/tablas/relacionadas/_Idiomas.html"  >_Idiomas</a></li>
+				<li><a class="" href="../pySage50e/tablas/relacionadas/_ListCamposAdicionales.html"  >_ListCamposAdicionales</a></li>
+				<li><a class="" href="../pySage50e/tablas/relacionadas/_Ofertas.html"  >_Ofertas</a></li>
+				<li><a class="" href="../pySage50e/tablas/relacionadas/_Precios.html"  >_Precios</a></li>
+				<li><a class="" href="../pySage50e/tablas/relacionadas/_Referencias.html"  >_Referencias</a></li>
+				<li><a class="" href="../pySage50e/tablas/relacionadas/_StockMaxMinAlmacen.html"  >_StockMaxMinAlmacen</a></li>
+			</ul>
+		</div>
+		<button id="folder-7" class="dir-button" onclick="toggle_dir(this.id)">vinculadas</button>
+		<div id="folder-container-7" class="dir-container requires_js " path="../pySage50e/tablas/vinculadas">
 			<ul class="dir-list">
 				<li><a class="" href="../pySage50e/tablas/vinculadas/Caracteristicas.html"  >Caracteristicas</a></li>
 				<li><a class="" href="../pySage50e/tablas/vinculadas/Familias.html"  >Familias</a></li>
@@ -251,6 +262,7 @@
 	</ul>
 </div>
 <ul class="dir-list">
+	<li><a class="" href="../Creacion automatica.html"  >Creacion automatica</a></li>
 	<li><a class="" href="../index.html"  >Inicio</a></li>
 </ul>
 </div>
@@ -264,32 +276,28 @@
                         <a href="./" style="color: rgb(var(--normal-text-color));">Home</a> / <span style="color: #666;">..</span> / <span style="color: #666;">pySage50e</span> / <span style="color: #666;">tablas</span> / <span style="color: #666;">maestras</span> / <a href="../../../pySage50e/tablas/maestras/Productos.html" >Productos</a>
                     </div>
                 </div>
-<div class="content"><h1 id="uso-rapido">Uso Rapido</h1>
+<div class="content"><h1 id="generador-campos-disponibles">Generador campos disponibles</h1>
 <div class="toc">
 <ul>
-<li><a href="#uso-rapido" class="anchor-link">Uso Rapido</a><ul>
-<li><a href="#codigo-ejemplo-de-uso-para-articulos" class="anchor-link">Codigo Ejemplo de uso para Articulos</a></li>
-</ul>
-</li>
 <li><a href="#generador-campos-disponibles" class="anchor-link">Generador campos disponibles</a><ul>
-<li><a href="#tablas-relacionados" class="anchor-link">Tablas Relacionados</a><ul>
+<li><a href="#tablas-relacionadas" class="anchor-link">Tablas Relacionadas</a><ul>
 <li><a href="#disponibles" class="anchor-link">Disponibles</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><a href="#metodo-creador-modificador" class="anchor-link">Metodo Creador / Modificador</a><ul>
-<li><a href="#tablas-vinculadas" class="anchor-link">Tablas vinculadas</a></li>
+<li><a href="#tablas-vinculadas" class="anchor-link">Tablas vinculadas</a><ul>
+<li><a href="#configuracion-creacion-automatica" class="anchor-link">Configuración creación automatica</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#metodo-extraer-registro" class="anchor-link">Metodo Extraer Registro</a></li>
 <li><a href="#metodo-lista" class="anchor-link">Metodo lista</a></li>
+<li><a href="#codigo-ejemplo" class="anchor-link">Codigo Ejemplo</a></li>
 </ul>
 </div>
-<h2 id="codigo-ejemplo-de-uso-para-articulos">Codigo Ejemplo de uso para Articulos</h2>
-<p><a href="https://github.com/wertyMSD/ejemplos_apiSAGE50/blob/master/maestros-articulos.py" class="external-link">ejemplos_apiSAGE50/maestros-articulos.py at master · wertyMSD/ejemplos_apiSAGE50 · GitHub</a>   </p>
-<hr />
-<h1 id="generador-campos-disponibles">Generador campos disponibles</h1>
 <div class="lang-general">
 
 <div class="codehilite"><pre><span></span><code>api50.product()
@@ -298,71 +306,43 @@
 
 </div>
 
-<h2 id="tablas-relacionados">Tablas Relacionados</h2>
+<h2 id="tablas-relacionadas">Tablas Relacionadas</h2>
 <h4 id="disponibles">Disponibles</h4>
 <table>
 <thead>
 <tr>
 <th style="text-align: center;"><strong>Recursos</strong></th>
 <th style="text-align: center;"><strong>Uso</strong></th>
-<th style="text-align: center;">Estado</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;"><a href="../../../not_created.html" class="nonexistent-link">Contactos</a> </td>
-<td style="text-align: center;">ManteTrel de contactos</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;"><a href="../../../pySage50e/tablas/relacionadas/_Ofertas.html">_Ofertas</a> </td>
+<td style="text-align: center;">ManteTrel Ofertas</td>
 </tr>
 <tr>
-<td style="text-align: center;"><a href="../../../not_created.html" class="nonexistent-link">Bancos</a> </td>
-<td style="text-align: center;">ManteTrel de Datos Bancarios</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;"><a href="../../../pySage50e/tablas/relacionadas/_Precios.html">_Precios</a> </td>
+<td style="text-align: center;">ManteTrel Precios</td>
 </tr>
 <tr>
-<td style="text-align: center;"><a href="../../../not_created.html" class="nonexistent-link">Descuentos</a> </td>
-<td style="text-align: center;">ManteTrel de descuentos</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;"><a href="../../../pySage50e/tablas/relacionadas/_Referencias.html">_Referencias</a> </td>
+<td style="text-align: center;">ManteTrel Relacion con <a href="../../../pySage50e/tablas/maestras/Proveedores.html">Proveedores</a></td>
 </tr>
 <tr>
-<td style="text-align: center;"><a href="../../../not_created.html" class="nonexistent-link">Direcciones</a> </td>
-<td style="text-align: center;">ManteTrel de direcciones</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;"><a href="../../../pySage50e/tablas/relacionadas/_StockMaxMinAlmacen.html">_StockMaxMinAlmacen</a> </td>
+<td style="text-align: center;">ManteTrel Stock Max / Min por <a href="../../../not_created.html" class="nonexistent-link">Almacen</a></td>
 </tr>
 <tr>
-<td style="text-align: center;"><a href="../../../not_created.html" class="nonexistent-link">Entregas</a> </td>
-<td style="text-align: center;">ManteTrel de entregas</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;"><a href="../../../not_created.html" class="nonexistent-link">_Imagenes</a> </td>
+<td style="text-align: center;">ManteTrel Imagenes/Documentos</td>
 </tr>
 <tr>
-<td style="text-align: center;"><a href="../../../not_created.html" class="nonexistent-link">Giros</a> </td>
-<td style="text-align: center;">ManteTrel de giros</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;"><a href="../../../pySage50e/tablas/relacionadas/_ListCamposAdicionales.html">_ListCamposAdicionales</a> </td>
+<td style="text-align: center;">ManteTrel Campos Libres</td>
 </tr>
 <tr>
-<td style="text-align: center;"><a href="../../../not_created.html" class="nonexistent-link">Imagenes</a> </td>
-<td style="text-align: center;">ManteTrel de ficheros asociados</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: center;"><a href="../../../not_created.html" class="nonexistent-link">Vacaciones</a> </td>
-<td style="text-align: center;">ManteTrel de vacaciones</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: center;"><a href="../../../not_created.html" class="nonexistent-link">Actividades</a> </td>
-<td style="text-align: center;">ManteTrel de actividades</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: center;"><a href="../../../not_created.html" class="nonexistent-link">Cuotas</a> </td>
-<td style="text-align: center;">ManteTrel de cuotas</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr>
-<td style="text-align: center;"><a href="../../../not_created.html" class="nonexistent-link">CamposAdicionales</a> </td>
-<td style="text-align: center;">Campos adicionales</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;"><a href="../../../pySage50e/tablas/relacionadas/_Idiomas.html">_Idiomas</a> </td>
+<td style="text-align: center;">ManteTrel Traduciones</td>
 </tr>
 </tbody>
 </table>
@@ -415,38 +395,34 @@
 <thead>
 <tr>
 <th style="text-align: left;">Recursos</th>
-<th style="text-align: center;"><strong>Uso</strong></th>
-<th style="text-align: center;">Estado</th>
+<th style="text-align: center;"><strong><a href="../../../Creacion%20automatica.html">Creacion automatica</a></strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;"><a href="../../../pySage50e/tablas/vinculadas/Familias.html">Familias</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">🆗</td>
 </tr>
 <tr>
 <td style="text-align: left;"><a href="../../../pySage50e/tablas/vinculadas/SubFamilias.html">SubFamilias</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">🆗</td>
 </tr>
 <tr>
 <td style="text-align: left;"><a href="../../../pySage50e/tablas/vinculadas/Marcas.html">Marcas</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">🆗</td>
 </tr>
 <tr>
 <td style="text-align: left;"><a href="../../../pySage50e/tablas/vinculadas/Caracteristicas.html">Caracteristicas</a></td>
-<td style="text-align: center;"></td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;">🆗</td>
 </tr>
 </tbody>
 </table>
+<h4 id="configuracion-creacion-automatica">Configuración creación automatica</h4>
 <div class="callout callout-tip active" rasa="1">
 <div class="callout-title ">
 <div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"></path></svg>
 </div>
-<div class="callout-title-name">Configuracion Opcional <br />
+<div class="callout-title-name">Configuracion Opcional Creacion Automatica <br />
 </div>
 </div>
 <div class="callout-content">
@@ -483,6 +459,7 @@ _Modifique dicho parametro si no es requerido.__
 <p>Regresa tabla en formato JSON con cada registro de Tabla principal y  tablas relacionadas.   </p>
 <hr />
 <h1 id="metodo-lista">Metodo lista</h1>
+<p>Devuelve  una variable con un tabla con los registros que cumple la condicion en la tabla.   </p>
 <div class="lang-general">
 
 <div class="codehilite"><pre><span></span><code><span class="n">lista</span><span class="o">=</span><span class="n">api50</span><span class="o">.</span><span class="n">product</span><span class="p">(</span><span class="n">wlista</span><span class="o">=</span><span class="s2">&quot;Familia=&#39;01&#39;&quot;</span><span class="p">)</span>
@@ -496,15 +473,19 @@ _Modifique dicho parametro si no es requerido.__
 </code></pre></div>
 
 
-</div></div>
+</div>
+
+<h1 id="codigo-ejemplo">Codigo Ejemplo</h1>
+<p><a href="https://github.com/wertyMSD/ejemplos_apiSAGE50/blob/master/maestros-articulos.py" class="external-link">GitHub</a>   </p>
+<p><a href="https://github.com/wertyMSD/ejemplos_apiSAGE50/blob/master/Articulo.txt" class="external-link">Lista Campos disponibles </a></p></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
 <ul>
 	<li><a class="backlink" href="../../../pySage50e/tablas/Recursos Maestros.html">recursos maestros</a></li>
 	<li><a class="backlink" href="../../../index.html">index</a></li>
-	<li><a class="backlink" href="../../../pySage50e/tablas/vinculadas/Caracteristicas.html">caracteristicas</a></li>
 	<li><a class="backlink" href="../../../pySage50e/tablas/vinculadas/Marcas.html">marcas</a></li>
+	<li><a class="backlink" href="../../../pySage50e/tablas/vinculadas/Caracteristicas.html">caracteristicas</a></li>
 	<li><a class="backlink" href="../../../pySage50e/tablas/vinculadas/SubFamilias.html">subfamilias</a></li>
 	<li><a class="backlink" href="../../../pySage50e/tablas/vinculadas/Familias.html">familias</a></li>
 </ul>

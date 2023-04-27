@@ -59,7 +59,7 @@ if __name__ == "__main__":
     print(api50.product(articulominimo))
 
     '''
-    tablas relacionadas
+    Tablas relacionadas
     '''
     print("Alta oferta _Ofertas")
     articulo_tablarelacionada= {'Codigo': 'prueba', '_Ofertas#Tarifa': 'TD',}
