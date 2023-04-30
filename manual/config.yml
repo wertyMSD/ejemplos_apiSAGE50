@@ -69,7 +69,7 @@ toggles:
   warn_on_skipped_image: true
   no_clean: false
   relative_path_md: true
-  relative_path_html: true
+  relative_path_html: false
   external_blank: false
   img_alt_text_use_figure: true
   preserve_inline_tags: true

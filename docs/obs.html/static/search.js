@@ -5,8 +5,8 @@ var SEARCH_DATA_SOURCE = '';                   // search.json contents
 var SEARCH_DATA_LOADED = false;
 var SEARCH_DATA = [];                          // SEARCH_DATA_SOURCE with changes made
 
-var URL_MODE = 'relative';
-var RELATIVE_PATHS = 1;
+var URL_MODE = 'absolute';
+var RELATIVE_PATHS = 0;
 var CONFIGURED_HTML_URL_PREFIX = '';
 var TRY_PRELOAD = 0;
 
