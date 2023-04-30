@@ -1,0 +1,1 @@
+pip install "E:\OneDrive - ALCA TIC, S.L\@COPIA DE CLIENTES\PY\@produxion\@api\api_sage50\mislibrerias\dist\apiSage50-0.0.0-py3-none-any.whl" --upgrade --no-deps --force-reinstall
