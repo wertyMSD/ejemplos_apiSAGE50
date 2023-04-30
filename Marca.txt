@@ -1,0 +1,7 @@
+{ 'Codigo': '' # texto 
+, 'Nombre': '' # texto 
+, 'Margen': 0.0 #  
+, 'Tcp': '' #  
+, 'Descuen': 0.0 #  
+, 'Vertpv': False #  
+}

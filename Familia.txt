@@ -1,0 +1,19 @@
+{ 'Codigo': '' # texto 
+, 'Nombre': '' # texto 
+, 'Cta_Compra': '' #  
+, 'Cta_Venta': '' #  
+, 'Cod_Intra': '' #  
+, 'Margen': 0.0 # texto 
+, 'Tcp': '' #  
+, 'Descuen': 0.0 # texto 
+, 'Orden': False # texto 
+, 'Junfra': False # texto 
+, 'Vertpv': False #  
+, 'Codintradi': '' #  
+, '_Descuentos#Familia': '' #  
+, '_Descuentos#Fecha_Fin': '' #  
+, '_Descuentos#Fecha_Ini': '' #  
+, '_Descuentos#Tan': 0.0 #  
+, '_Descuentos#Uni_Fin': 0.0 #  
+, '_Descuentos#Uni_Ini': 0.0 #  
+}

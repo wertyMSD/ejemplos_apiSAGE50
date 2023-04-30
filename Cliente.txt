@@ -1,0 +1,170 @@
+{ 'Codigo': '' # Codigo Cliente 
+, 'Cif': '' # CIF del cliente 
+, 'Nombre': '' # Nombre del cliente a partir del campo NOMBRE de la tabla CLIENTES de la base de datos de GESTION de Eurowin de la pestaña "Datos". En caso de que esté activada la variable pública "WL_HERA" únicamente permitirá la introducción de 35 caracteres aunque el tamaño del campo sea de 80 posiciones. 
+, 'Nombre2': '' # Razón comercial del cliente a partir del campo NOMBRE2 de la tabla CLIENTES de la base de datos de GESTION de Eurowin de la pestaña "Datos". En caso de que esté activada la variable pública "WL_HERA" únicamente permitirá la introducción de 40 caracteres aunque el tamaño del campo sea de 50 posiciones. 
+, 'Direccion': '' # Dirección del cliente 
+, 'Codpost': '' # Código postal del cliente 
+, 'Poblacion': '' # Población del cliente 
+, 'Provincia': '' # Provincia del cliente 
+, 'Pais': '' # Código de país que se establece al cliente 
+, 'Ruta': '' # Nos permitirá asignar el código del ruta al cliente. 
+, 'Vendedor': '' # Código de vendedor del cliente 
+, 'Tarifa': '' # Código de la tarifa de venta asociada al cliente 
+, 'Lin_Des': '' # Nos permitirá asignar una linea de descuento al cliente 
+, 'Valor_Alb': False # Nos permite establecer si al momento de imprimir un albarán de venta se valora 
+, 'Tipofac': '' # Código de tipo de facturación que se establece al cliente 
+, 'Copia_Fra': False # Nos permitirá establecer el número de copias de Facturas 
+, 'Idioma': '' # Nos permitirá asignar el código del idioma asignado al cliente 
+, 'Credito': 0.0 # Retorna el límite de credito del cliente 
+, 'Descu1': 0.0 # Nos permitirá asignar un primer descuento en % El valor entrado debe ser un valor entre 0 y 100 
+, 'Descu2': 0.0 # Nos permitirá asignar un segundo descuento en % El valor entrado debe ser un valor entre 0 y 100 
+, 'Pronto': 0.0 # Nos permitirá asignar un % de descuento de pronto pago El valor entrado debe ser un valor entre 0 y 100 
+, 'Diapag': False # Nos indicará el primer dia de pago del cliente 
+, 'Diapag2': False # Nos indicará el primer dia de pago del cliente El dia de Pago2 nunca podrá tener un valor inferior al DiaPago1 
+, 'Fpag': '' # Nos permitirá asignar el código de forma de pago al cliente 
+, 'Tipo_Iva': '' # Nos permitirá indicar el código de TIPO DE IVA aplicado a este cliente 
+, 'Recargo': False # Nos permitirá asignar si un cliente permite trabajar con retención fiscal 
+, 'Comunitari': False # Nos indicará el Territorio asociado al cliente 
+, 'Retencion': False #  
+, 'Modo_Ret': False #  
+, 'Tipo_Ret': '' #  
+, 'Observacio': '' # Observaciones 
+, 'Email': '' # Email predeterminado de la ficha del cliente 
+, 'Http': '' # Pagina web que tiene asociada el cliente 
+, 'Refundir': False # Refundido automático de previsiones de cobro 
+, 'Env_Cli': False # Dirección predeterminada del cliente. 
+, 'Albafra': False #  
+, 'Csb': False # Nos permitirá indicar si este cliente trabajará con CSB / SEPA 
+, 'Cia_Cred': '' # Nos permitirá indicar el código de compañía de crédito para el cliente 
+, 'Operacio': '' # Retorna el nº de operacion del apartado límite de credito del cliente 
+, 'Idioma_Imp': '' #  
+, 'Agencia': '' # Nos permitirá asignar el código del agencia al cliente. 
+, 'Bloq_Ven': False # Bloquear ventas si supera el límite de crédito cliente. 
+, 'Lim_Mon': False # Nos indicará la moneda del cliente 
+, 'Portes': '' #  
+, 'Portcomp': 0.0 #  
+, 'F_Alta': '|31-12-2023|' #  
+, 'Oferta': False # Aplicar ofertas al cliente. 
+, 'Bloq_Cli': False # Bloquear ventas al cliente 
+, 'Fecha_Baj': '|31-12-2023|' #  
+, 'Contrapar': '' #  
+, 'Zona': '' # Nos permitirá asignar el código del zona asignado al cliente 
+, 'Posicion': 0.0 #  
+, 'Mensaje': '' # Mensaje en pedido de venta / albarán 
+, 'Pregvac': False # Previsión automática vacaciones. 
+, 'Valportes': 0.0 # Importe de venta inferiores a este campo implicaran portes automaticos debidos. 
+, 'Fraped': False # Nos permite establecer si se genera una factura por pedido 
+, 'Val_Punt': 0.0 #  
+, 'Contado': False #  
+, 'C_Ent': '' #  
+, 'Dia1': False # Dia de visita Lunes 
+, 'Dia2': False # Dia de visita Martes 
+, 'Dia3': False # Dia de visita Miercoles 
+, 'Dia4': False # Dia de visita Jueves 
+, 'Dia5': False # Dia de visita Viernes 
+, 'Dia6': False # Dia de visita Sabado 
+, 'Dia7': False # Dia de visita Domingo 
+, 'Es_Grupo': False #  
+, 'Clifinal': '' # Código de cliente factura asociada al cliente 
+, 'Pverde': False #  
+, 'Tipcredit': '' # Nos permitirá indicar el código de tipo de crédito para el cliente 
+, 'Recarfin': 0.0 # Nos permite indicar el recargo financiero para este cliente El valor entrado nunca podrá ser negativo y será un valor entre 0 y 100 
+, 'Retnofisc': False # Nos permitirá asignar si un cliente permite trabajar con retención fiscal 
+, 'Tpcretnofi': 0.0 # Nos permitirá aplicar el % de retención no fiscal que trabaja el cliente En caso que el usuario no haya activado la propiedad _RetencionNoFiscal entonces esta propiedad pasará a tener el valor TRUE El valor entrado debe ser un valor entre 0 y 100 
+, 'Libre1': '' #  
+, 'Modretnofi': False # Nos permitirá asignar si un cliente permite trabajar con retención fiscal 
+, 'Email_F': '' # Email que tiene asignado el cliente para la facturación 
+, 'Tipo_Cli': False #  
+, 'Fraesi': False #  
+, 'Autotipdoc': '' #  
+, 'Bloqalbvta': False # Nos permite indicar si al cliente se le bloquean la generación de albaranes de venta en caso de superar el límte de crédito 
+, 'Bloqpedvta': False # Nos permite indicar si al cliente se le bloquean la generación de pedidos de venta en caso de superar el límte de crédito 
+, 'Bloqprevta': False # Nos permite indicar si al cliente se le bloquean la generación de presupuestos de venta en caso de superar el límte de crédito 
+, 'Bloqdepvta': False # Nos permite indicar conforme al cliente no se le permite realizar más ventas si se supera el limite de credito 
+, 'Nocomusms': False # No incluir a este cliente en comunicados de tipo SMS 
+, 'Nocomuema': False # No incluir a esta entidad en comunicados de tipo Email 
+, 'Nocomucar': False # No incluir a esta entidad en comunicados de tipo correo ordinario 
+, 'Fbloqnosms': '|31-12-2023|' # No incluir a esta entidad en comunicados de tipo correo ordinario 
+, 'Fbloqnoema': '|31-12-2023|' # Fecha de bloqueo de envio de comunicados por Email 
+, 'Fbloqnocar': '|31-12-2023|' # Fecha de bloqueo de envio de comunicados por carta 
+, 'Nocomuobs': '' # Observaciones no comunicado 
+, 'Regcaja': False #  
+, 'Clienteerp': '' # PE-106179 
+, 'Recc': False # Nos indica si al cliente se le aplica el criterio de caja en ventas Si el cliente no es nacional entonces no se podrá marcar este check 
+, 'Ctaerp': '' #  
+, 'Nombre3Erp': '' #  
+, 'Poblacerp': '' #  
+, 'Provinerp': '' #  
+, 'Territerp': False #  
+, 'Direcc2Erp': '' #  
+, 'Delegerp': '' #  
+, 'Isp': False #  
+, 'Canal': '' # Nos permitirá asignar el código del canal asignado al cliente 
+, 'Facebook': '' # Url de Facebook del cliente 
+, 'Twitter': '' # Url de Twitter del cliente 
+, 'Skype': '' # Skype del cliente 
+, 'Banco_Prev': '' #  
+, 'Cambio': 0.0 # Casilla en la que se podrá informar un importe de cambio que se haya pactado con el proveedor y que se aplicará por defecto al crear documentos, previsiones, etc. Se podrán informar hasta 6 decimales y si no se ha informado la casilla Moneda del proveedor o se ha informado la misma moneda que tenemos informada en la configuración de empresa, dicha casilla no se podrá modificar. 
+, 'Fec_Cam': '|31-12-2023|' #  
+, 'Plefact': '' # Código de plantilla de factura electrónica 
+, 'Dire': '' # Dirección del cliente 
+, 'Excluir349': False # Nos permitirá indicar si este cliente se incluirá en el modelo 349 
+, 'Refer_Cat': '' # Referencia catastral 
+, 'Letdefven': '' # Serie por defecto 
+, 'Letdefrect': '' # Serie rectificativa por defecto 
+, 'Eticomu': '' # Nos permitirá filtrar la entidad rápidamente en el alta de grupos de destinatarios. Se mostrará en listas previas. 
+, '_TRelContacTelefs#Predet': False #  
+, '_TRelContacTelefs#Persona': '' #  
+, '_TRelContacTelefs#Cargo': '' #  
+, '_TRelContacTelefs#Telefono': '' #  
+, '_TRelContacTelefs#Observa': '' #  
+, '_TRelContacTelefs#Email': '' #  
+, '_TRelContacTelefs#Skype': '' #  
+, '_TRelContacTelefs#Facebook': '' #  
+, '_TRelContacTelefs#Twitter': '' #  
+, '_TRelContacTelefs#Lincontcli': False #  
+, '_TRelContacTelefs#Lintelfcli': False #  
+, '_TRelContacTelefs#Tipo': False #  
+, '_TRelDatosBancarios#Banco': '' #  
+, '_TRelDatosBancarios#Direccion': '' #  
+, '_TRelDatosBancarios#Codpos': '' #  
+, '_TRelDatosBancarios#Poblacion': '' #  
+, '_TRelDatosBancarios#Provincia': '' #  
+, '_TRelDatosBancarios#Ctabanco': '' #  
+, '_TRelDatosBancarios#Ctasucur': '' #  
+, '_TRelDatosBancarios#Digcon': '' #  
+, '_TRelDatosBancarios#Ctacuenta': '' #  
+, '_TRelDatosBancarios#Cuentaiban': '' #  
+, '_TRelDatosBancarios#Swift': '' #  
+, '_TRelDescuen#Articulo': '' #  
+, '_TRelDescuen#Familia': '' #  
+, '_TRelDescuen#Dto1': 0.0 #  
+, '_TRelDescuen#Dto2': 0.0 #  
+, '_TRelDescuen#Dto3': 0.0 #  
+, '_TRelDescuen#Fecha_In': '|31-12-2023|' #  
+, '_TRelDescuen#Fecha_Fin': '|31-12-2023|' #  
+, '_TRelDescuen#Pvp': 0.0 #  
+, '_TRelDescuen#Moneda': '' #  
+, '_TRelDescuen#Subfamilia': '' #  
+, '_TRelDescuen#Obra': '' #  
+, '_TRelDescuen#Marca': '' #  
+, '_TRelDescuen#Talla': '' #  
+, '_TRelDescuen#Color': '' #  
+, '_TRelDescuen#Uni_Min': 0.0 #  
+, '_TRelDescuen#Uni_Max': 0.0 #  
+, '_TRelDirecciones#Nombre': '' #  
+, '_TRelDirecciones#Direccion': '' #  
+, '_TRelDirecciones#Codpos': '' #  
+, '_TRelDirecciones#Poblacion': '' #  
+, '_TRelDirecciones#Provincia': '' #  
+, '_TRelDirecciones#Horario': '' #  
+, '_TRelDirecciones#Telefono': '' #  
+, '_TRelDirecciones#Fax': '' #  
+, '_TRelDirecciones#Pais': '' #  
+, '_TRelDirecciones#Tipo': False #  
+, '_TRelDirecciones#Libre_1': '' #  
+, '_TRelDirecciones#Libre_2': '' #  
+, '_TRelImagenes#Imagen': '' #  
+, '_ListCamposAdicionales#Campo': '' #  
+, '_ListCamposAdicionales#Valor': '' #  
+}

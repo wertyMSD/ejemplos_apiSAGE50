@@ -1,0 +1,3 @@
+{ 'Codigo': '' # texto 
+, 'Nombre': '' # texto 
+}

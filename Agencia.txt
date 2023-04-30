@@ -1,0 +1,12 @@
+{ 'Codigo': '' #  
+, 'Nombre': '' #  
+, 'Report': '' #  
+, 'Direccion': '' #  
+, 'Poblacion': '' #  
+, 'Codpost': '' #  
+, 'Provincia': '' #  
+, 'Pais': '' #  
+, 'Telefon': '' #  
+, 'Email': '' #  
+, 'Http': '' #  
+}

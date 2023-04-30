@@ -1,0 +1,33 @@
+{ 'Codigo': '' # texto 
+, 'Nombre': '' # texto 
+, 'Descuento': 0.0 # texto 
+, 'Cliente': '' # texto 
+, 'Observacio': '' # texto 
+, 'Cif': '' # texto 
+, 'Codpost': '' # texto 
+, 'Direccion': '' # texto 
+, 'Encargado': '' # texto 
+, 'Fax': '' # texto 
+, 'Fpag': '' # texto 
+, 'Movil': '' # texto 
+, 'Poblacion': '' # texto 
+, 'Posicion': False # texto 
+, 'Pp': 0.0 # texto 
+, 'Provincia': '' # texto 
+, 'Ruta': '' # texto 
+, 'Telefono': '' # texto 
+, 'Vendedor': '' # texto 
+, 'Zona': '' # texto 
+, 'Tarifa': '' # texto 
+, 'Terminada': False # texto 
+, 'Marvehic': '' #  
+, 'Modvehic': '' #  
+, 'Usuario': '' # texto 
+, 'Password': '' # texto 
+, 'Libre_1': '' # texto 
+, 'Libre_2': '' # texto 
+, 'Libre_3': '' # texto 
+, 'Isp': False # texto 
+, 'Tipo_Iva': '' #  
+, '_TRelImagenes#Imagen': '' #  
+}

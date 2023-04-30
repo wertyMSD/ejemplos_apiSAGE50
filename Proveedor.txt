@@ -1,29 +1,29 @@
-{ 'Codigo': '' #  
+{ 'Codigo': '' # texto 
 , 'Env_Pro': False #  
-, 'Nombre': '' #  
+, 'Nombre': '' # texto 
 , 'Nombre2': '' #  
-, 'Direccion': '' #  
+, 'Direccion': '' # texto 
 , 'Codpost': '' #  
-, 'Poblacion': '' #  
-, 'Provincia': '' #  
+, 'Poblacion': '' # texto 
+, 'Provincia': '' # texto 
 , 'Cif': '' #  
-, 'Banco': '' #  
+, 'Banco': '' # texto 
 , 'Fpag': '' #  
 , 'Pronto': 0.0 #  
 , 'Tipo_Iva': '' #  
-, 'Recargo': False #  
+, 'Recargo': False # texto 
 , 'Comunitari': False #  
-, 'Retencion': False #  
+, 'Retencion': False # texto 
 , 'Modo_Ret': False #  
 , 'Tipo_Ret': '' #  
-, 'Email': '' #  
+, 'Email': '' # texto 
 , 'Http': '' #  
 , 'Dias_Ent': False #  
 , 'Observacio': '' #  
 , 'Descu1': 0.0 #  
 , 'Descu2': 0.0 #  
-, 'Idioma': '' #  
-, 'Pais': '' #  
+, 'Idioma': '' # texto 
+, 'Pais': '' # texto 
 , 'Diapag': 0.0 #  
 , 'Diapag2': 0.0 #  
 , 'Mod349': False #  
@@ -53,12 +53,12 @@
 , 'Direcc2Erp': '' #  
 , 'Delegerp': '' #  
 , 'Canal': '' #  
-, 'Facebook': '' #  
-, 'Twitter': '' #  
-, 'Skype': '' #  
-, 'Cambio': 0.0 #  
+, 'Facebook': '' # texto 
+, 'Twitter': '' # texto 
+, 'Skype': '' # texto 
+, 'Cambio': 0.0 # texto 
 , 'Fec_Cam': '|31-12-2023|' #  
-, 'Excluir349': False #  
+, 'Excluir349': False # texto 
 , 'Refer_Cat': '' #  
 , 'Eticomu': '' #  
 , '_TRelContacTelefs#Proveedor': '' #  

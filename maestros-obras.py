@@ -5,7 +5,7 @@ def reg():
   ## relacion de campos
 
   '''
-     articulo={'Codigo': 'prueba', 'Nombre': 'prueba nombre', 'Abrev': '', 'Familia': '001', 'Marca': '', 'Minimo': 0.0, 'Maximo': 0.0, 'Aviso': False,
+     obra={'Codigo': 'prueba', 'Nombre': 'prueba nombre', 'Abrev': '', 'Familia': '001', 'Marca': '', 'Minimo': 0.0, 'Maximo': 0.0, 'Aviso': False,
      'Baja': False, 'Tipo_Iva': '03', 'Retencion': '', 'Iva_Inc': False, 'Cost_Ult1': 0.0, 'Fecha_Ult': '|31-12-2023|',
      'Ult_Fecha': '|31-12-2023|', 'Pmcom1': 0.0, 'Imagen': '', 'Carac': '', 'Fechaalta': '|31-12-2023|',
      'Fechabaja': '|31-12-2023|', 'Ubicacion': '', 'Medidas': '', 'Peso': '', 'Litros': '', 'Observacio': '',
@@ -21,7 +21,7 @@ def reg():
      '_Ofertas#Tarifa': '', '_Ofertas#Cliente': '', '_Ofertas#Talla': '', '_Ofertas#Color': '', '_Ofertas#Tallare': '',
      '_Ofertas#Colore': '', '_Ofertas#Hora_Ini': '', '_Ofertas#Hora_Fin': '', '_Ofertas#Unidades': False,
      '_Precios#Tarifa': '', '_Precios#Pvp': 0.0, '_Precios#Margen': 0.0, '_Precios#Tcp': '',
-     '_Precios#Fechaini': '|31-12-2023|', '_Precios#Fechafin': '|31-12-2023|', '_Referencias#Articulo': '',
+     '_Precios#Fechaini': '|31-12-2023|', '_Precios#Fechafin': '|31-12-2023|', '_Referencias#obra': '',
      '_Referencias#Proveedor': '', '_Referencias#Referencia': '', '_Referencias#Pcompra': 0.0, '_Referencias#Dto1': 0.0,
      '_Referencias#Dto2': 0.0, '_Referencias#Fecha_Ult': '|31-12-2023|', '_Referencias#Moneda': '',
      '_Referencias#Predet': False, '_Referencias#Color': '', '_Referencias#Talla': '', '_Referencias#Dto5': 0.0,
@@ -29,7 +29,7 @@ def reg():
      '_Referencias#Cambio': 0.0, '_StockMaxMinAlmacen#Almacen': '', '_StockMaxMinAlmacen#Color': '',
      '_StockMaxMinAlmacen#Maximo': 0.0, '_StockMaxMinAlmacen#Minimo': 0.0, '_StockMaxMinAlmacen#Talla': '',
      '_Imagenes#Imagen': '', '_ListCamposAdicionales#Campo': '', '_ListCamposAdicionales#Valor': '',
-     '_Escandallos#Articulo': '', '_Escandallos#Componente': '', '_Escandallos#Unidades': 0.0, '_Escandallos#Pvp': 0.0,
+     '_Escandallos#obra': '', '_Escandallos#Componente': '', '_Escandallos#Unidades': 0.0, '_Escandallos#Pvp': 0.0,
      '_Escandallos#Valorado': False, '_Escandallos#Tarifa': '', '_Escandallos#Linia': 0, '_Escandallos#Pmanual': False,
      '_Escandallos#Coste': 0.0, '_Escandallos#Fecha': '|31-12-2023|', '_Escandallos#Anotacion': '',
      '_Escandallos#Libre_1': '', '_Escandallos#Libre_2': '', '_Escandallos#Libre_3': '',
@@ -55,52 +55,35 @@ if __name__ == "__main__":
 
 
     print("Alta con campos minimos")
-    articulominimo = {'Codigo': 'prueba', 'Nombre': 'prueba nombre', 'Familia': '01',  'Tipo_Iva': '03'}
-    print(api50.product(articulominimo))
+    obraminimo = {'Codigo': '12345', 'Nombre': 'prueba nombre'}
+
+    obraminimo=api50.work(obraminimo)
+    print(obraminimo)
 
     '''
     Tablas relacionadas
     '''
-    print("Alta oferta _Ofertas")
-    articulo_tablarelacionada= {'Codigo': 'prueba', '_Ofertas#Tarifa': 'TD',}
-    print(api50.product(articulo_tablarelacionada))
-
-    print("Alta precios _Precios")
-    articulo_tablarelacionada= {'Codigo': 'prueba', '_Precios#Tarifa': 'TD', '_Precios#Pvp': 100 }
-    print(api50.product(articulo_tablarelacionada))
-
-
-    print("Alta tarifa_proveedores _Referencias")
-    articulo_tablarelacionada= {'Codigo': 'prueba',  '_Referencias#Proveedor': '400000001', '_Referencias#Referencia': 'codiprovee', '_Referencias#Pcompra': 10}
-    print(api50.product(articulo_tablarelacionada))
-
-    print("Alta Stock Minimo_Maximo _StockMaxMinAlmacen")
-    articulo_tablarelacionada= {'Codigo': 'prueba',  "_StockMaxMinAlmacen#almacen": "01", "_StockMaxMinAlmacen#Maximo": 100.0, '_StockMaxMinAlmacen#Minimo': 10.0,}
-    print(api50.product(articulo_tablarelacionada))
 
     print("Alta Imagenes/Documentos _Imagenes")
-    articulo_tablarelacionada= {'Codigo': 'prueba',  '_Imagenes#Imagen': 'E:\@github\ejemplos_apiSAGE50\Articulo.txt'}
-    print(api50.product(articulo_tablarelacionada))
+    obra_tablarelacionada= {'Codigo': obraminimo[0],  '_Imagenes#Imagen': 'E:\@github\ejemplos_apiSAGE50\obra.txt'}
+    print(api50.work(obra_tablarelacionada))
 
-    print("Alta campos libres _ListCamposAdicionales")
-    articulo_tablarelacionada= {'Codigo': 'prueba',  '_ListCamposAdicionales#Campo': '001' , '_ListCamposAdicionales#Valor': 'test valor'   }
-    print(api50.product(articulo_tablarelacionada))
 
-    print("Alta Escandadallos _Escandallo") # todo por hacer
-    articulo_tablarelacionada = {'Codigo': 'prueba', '_Escandallos#Componente': '1' ,'_Escandallos#Unidades': 10 ,'_Escandallos#Campo':"hola"  }
-    print(api50.product(articulo_tablarelacionada))
 
-    print("Alta Idioma _Idiomas ")
-    articulo_tablarelacionada = {'Codigo': 'prueba','_Idiomas#Idioma': 'ING'  , '_Idiomas#Definicion': 'Test'}
-    print(api50.product(articulo_tablarelacionada))
+
+
 
     ''''
     LISTADO 
     Devuelve lista registro que lo cumple condicion. Si esta vacion son todos los registros 
     '''
 
-    lista=api50.product(wlista="Familia='01'")
+    lista=api50.work(wlista="Familia='01'")
     print(lista)
+
+    if lista[0]==None:
+        print("Consulta erronea en wlista")
+        lista=""
     ''''
         Extrae  
         Devuelve JSON con las registro en la tablas relacionas
@@ -108,13 +91,14 @@ if __name__ == "__main__":
 
     if len(lista)>0:
         for reg  in lista[0]:
-            ajson=api50.product(cextraer=reg["Codigo"])
+            ajson=api50.work(cextraer=reg["Codigo"])
 
         print(json.loads(ajson[0]))
 
 
+
     ##genera los campos disponibles
 
-    print(api50.product())
+    print(api50.work())
 
-    ## ver documento Articulo.txt
+    ## ver documento obra.txt

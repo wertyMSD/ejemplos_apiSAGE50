@@ -1,0 +1,48 @@
+{ 'Codigo': '' # texto 
+, 'Nombre': '' # texto 
+, 'Comision': 0.0 #  
+, 'Dni': '' #  
+, 'Telefon': '' #  
+, 'Mobil': '' #  
+, 'Fax': '' # texto 
+, 'Direccion': '' # texto 
+, 'Poblacion': '' # texto 
+, 'Codpost': '' #  
+, 'Observacio': '' #  
+, 'Provincia': '' # texto 
+, 'Foto': '' # texto 
+, 'Com_Dto': False #  
+, 'Ctacobro': '' #  
+, 'Pais': '' # texto 
+, 'Empresa': '' # texto 
+, 'Matricula': '' # texto 
+, 'Menoscomi': False #  
+, 'Ctacobro2': '' #  
+, 'Almauto': '' #  
+, 'Libre_1': '' #  
+, 'Libre_2': '' #  
+, 'Libre_3': '' #  
+, 'Clavepol': '' #  
+, 'Poblacerp': '' #  
+, 'Delegerp': '' #  
+, 'Provinerp': '' #  
+, 'Email': '' # texto 
+, 'Eticomu': '' #  
+, 'Fbloqnocar': '|31-12-2023|' #  
+, 'Fbloqnoema': '|31-12-2023|' #  
+, 'Nocomucar': False #  
+, 'Nocomuema': False #  
+, 'Nocomuobs': '' #  
+, '_Comisiones#Articulo': '' #  
+, '_Comisiones#Familia': '' #  
+, '_Comisiones#Comision': 0.0 #  
+, '_Comisiones#Prima': 0.0 #  
+, '_Comisiones#Imp_Uni': 0.0 #  
+, '_Comisiones#Moneda': '' #  
+, '_Comisiones#Dto': 0.0 #  
+, '_Comisiones#Libre_1': '' #  
+, '_Comisiones#Libre_2': '' #  
+, '_Comisiones#Libre_3': '' #  
+, '_Comisiones#Cliente': '' #  
+, '_Comisiones#Subfamilia': '' #  
+}

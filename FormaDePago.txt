@@ -1,0 +1,12 @@
+{ 'Codigo': '' # texto 
+, 'Nombre': '' # texto 
+, 'Rec_Finan': 0.0 #  
+, 'Grupo': '' #  
+, 'Efectivo': False # texto 
+, 'Csb34': False #  
+, 'Dias_Riesgo': False #  
+, 'Contado': False #  
+, 'Fraefpag': '' #  
+, 'Domibanc': False #  
+, 'Girmescomp': False #  
+}
