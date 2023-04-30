@@ -5,7 +5,7 @@
         <head>
                 <!-- Page information -->
                 <meta charset="UTF-8" />
-                <meta name="node_id" content="presupuesto venta">
+                <meta name="node_id" content="compras presupuesto">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="shortcut icon" href="../../favicon.ico" />
 
@@ -47,7 +47,7 @@
 
                 <!-- Onload tweaks -->
                 <script>
-                        const CURRENT_NODE = 'presupuesto venta';
+                        const CURRENT_NODE = 'compras presupuesto';
                         const HTML_URL_PREFIX = '../..';
                         const PAGE_DEPTH = 2;
                 </script>
@@ -208,16 +208,21 @@
 	<button id="folder-2" class="dir-button" onclick="toggle_dir(this.id)">1NOPUBLICAR</button>
 	<div id="folder-container-2" class="dir-container requires_js " path="../pySage50e/1NOPUBLICAR">
 		<ul class="dir-list">
-			<li><a class="" href="../pySage50e/1NOPUBLICAR/Albaran venta.html"  >Albaran venta</a></li>
 			<li><a class="" href="../pySage50e/1NOPUBLICAR/Documentacion SAGE tecnica.html"  >Documentacion SAGE tecnica</a></li>
-			<li><a class="" href="../pySage50e/1NOPUBLICAR/linea adicional con la descripcion larga.html"  >linea adicional con la descripcion larga</a></li>
 		</ul>
 	</div>
 	<button id="folder-3" class="dir-button" onclick="toggle_dir(this.id)">Documentos</button>
 	<div id="folder-container-3" class="dir-container requires_js " path="../pySage50e/Documentos">
 		<ul class="dir-list">
-			<li><a class="" href="../pySage50e/Documentos/Pedido Venta.html"  >Pedido Venta</a></li>
-			<li><a class="" href="../pySage50e/Documentos/Presupuesto Venta.html"  >Presupuesto Venta</a></li>
+			<li><a class="" href="../pySage50e/Documentos/Compras Albaran.html"  >Compras Albaran</a></li>
+			<li><a class="" href="../pySage50e/Documentos/Compras Pedido.html"  >Compras Pedido</a></li>
+			<li><a class="" href="../pySage50e/Documentos/Compras Presupuesto.html"  >Compras Presupuesto</a></li>
+			<li><a class="" href="../pySage50e/Documentos/Modelo Registro Documentos Compra.html"  >Modelo Registro Documentos Compra</a></li>
+			<li><a class="" href="../pySage50e/Documentos/Modelo Registro Documentos Venta.html"  >Modelo Registro Documentos Venta</a></li>
+			<li><a class="" href="../pySage50e/Documentos/Venta Albaran.html"  >Venta Albaran</a></li>
+			<li><a class="" href="../pySage50e/Documentos/Venta Factura.html"  >Venta Factura</a></li>
+			<li><a class="" href="../pySage50e/Documentos/Venta Pedido.html"  >Venta Pedido</a></li>
+			<li><a class="" href="../pySage50e/Documentos/Venta Presupuesto.html"  >Venta Presupuesto</a></li>
 		</ul>
 	</div>
 	<button id="folder-4" class="dir-button" onclick="toggle_dir(this.id)">Tablas</button>
@@ -292,18 +297,88 @@
                 <div style="width:100%; text-align: right;display: block;margin: 0.5rem;">
                     <div style="flex:1;display: none;"></div>
                     <div class="breadcrumbs" style="flex:1 ;padding: 0.5rem; width: fit-content;display: inline;border-radius: 0.2rem;">
-                        <a href="./" style="color: rgb(var(--normal-text-color));">Home</a> / <span style="color: #666;">pySage50e</span> / <span style="color: #666;">Documentos</span> / <a href="../../pySage50e/Documentos/Presupuesto Venta.html" >Presupuesto Venta</a>
+                        <a href="./" style="color: rgb(var(--normal-text-color));">Home</a> / <span style="color: #666;">pySage50e</span> / <span style="color: #666;">Documentos</span> / <a href="../../pySage50e/Documentos/Compras Presupuesto.html" >Compras Presupuesto</a>
                     </div>
                 </div>
-<embeddedtitle>Presupuesto Venta</embeddedtitle>
-<div class="content"><div class="toc">
-<ul></ul>
-</div></div>
+<embeddedtitle>Compras Presupuesto</embeddedtitle>
+<div class="content"><p>Modificado : <code>$= dv.current().file.mtime</code>   </p>
+<h1 id="generador-modelo">Generador Modelo</h1>
+<div class="toc">
+<ul>
+<li><a href="#generador-modelo" class="anchor-link">Generador Modelo</a><ul>
+<li><a href="#modelo-documento" class="anchor-link">Modelo Documento</a></li>
+</ul>
+</li>
+<li><a href="#uso" class="anchor-link">Uso</a></li>
+<li><a href="#codigo-ejemplo" class="anchor-link">Codigo Ejemplo</a></li>
+</ul>
+</div>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>api50.pre_compra()
+</code></pre></div>
+
+
+</div>
+
+<h4 id="modelo-documento">Modelo Documento</h4>
+<div class="lang-py">
+
+<div class="codehilite"><pre><span></span><code> <span class="n">documento_compra</span><span class="o">=</span>
+         <span class="p">{</span> <span class="s2">&quot;Cabecera&quot;</span><span class="p">:{</span>
+                  <span class="s1">&#39;Empresa&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;Numero&#39;</span><span class="p">:</span> <span class="mi">0</span> <span class="p">,</span> <span class="s1">&#39;Serie&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span>  
+                  <span class="p">,</span><span class="s1">&#39;Fecha&#39;</span><span class="p">:</span> <span class="s1">&#39;|31-12-2023|&#39;</span> <span class="c1">#opcional</span>
+
+                  <span class="p">,</span> <span class="s1">&#39;Proveedor&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span> <span class="c1">#obligatorio</span>
+                  <span class="p">,</span> <span class="s1">&#39;Env_Cli&#39;</span><span class="p">:</span> <span class="mi">0</span> <span class="p">,</span> <span class="s1">&#39;Ruta&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;Entrega&#39;</span><span class="p">:</span> <span class="s1">&#39;|31-12-2023|&#39;</span>
+                  <span class="p">,</span> <span class="s1">&#39;Vendedor&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;Obra&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span>
+                  <span class="p">,</span> <span class="s1">&#39;Observacio&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;Nota&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span>
+                  <span class="p">,</span> <span class="s1">&#39;Pronto_Pago&#39;</span><span class="p">:</span> <span class="mf">0.0</span>
+                  <span class="p">,</span> <span class="s1">&#39;Fpag&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;Tarifa&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s2">&quot;Almacen&quot;</span><span class="p">:</span><span class="s1">&#39;&#39;</span>
+                  <span class="p">,</span><span class="s1">&#39;Libre_1&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span> <span class="p">,</span> <span class="s1">&#39;Libre_2&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;Libre_3&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span>
+                            <span class="p">}</span>
+                <span class="p">,</span><span class="s2">&quot;Lineas&quot;</span><span class="p">:[</span>
+                  <span class="p">{</span><span class="s1">&#39;Articulo&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;Definicion&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;CodigoTipoIVA&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span>
+                 <span class="p">,</span><span class="s1">&#39;PorcentajeIVA&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;Cajas&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;Unidades&#39;</span><span class="p">:</span> <span class="mf">0.0</span>
+                 <span class="p">,</span><span class="s1">&#39;Talla&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;Color&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;Peso&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;PuntoVerde&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span>
+                 <span class="p">,</span><span class="s2">&quot;lote&quot;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s2">&quot;FechaCaducidad&quot;</span><span class="p">:</span><span class="s1">&#39;|31-12-2023|&#39;</span>
+                 <span class="p">,</span><span class="s1">&#39;PrecioIva&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Precio&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Dto1&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Dto2&#39;</span><span class="p">:</span> <span class="mi">0</span>
+                  <span class="p">}</span> <span class="c1">#linea 1</span>
+                 <span class="p">,{</span><span class="s1">&#39;Articulo&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;Definicion&#39;</span><span class="p">:</span> <span class="s1">&#39;hola mundo&#39;</span>
+                 <span class="p">,</span> <span class="s1">&#39;CodigoTipoIVA&#39;</span><span class="p">:</span> <span class="s1">&#39;00&#39;</span><span class="p">,</span> <span class="s1">&#39;Cajas&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;Unidades&#39;</span><span class="p">:</span> <span class="mf">0.0</span>
+                 <span class="p">,</span><span class="s1">&#39;Talla&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;Color&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;Peso&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;PuntoVerde&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span>
+                 <span class="p">,</span> <span class="s2">&quot;lote&quot;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s2">&quot;FechaCaducidad&quot;</span> <span class="p">:</span> <span class="s1">&#39;|31-12-2023|&#39;</span>
+                 <span class="p">,</span><span class="s1">&#39;PrecioIva&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Precio&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Dto1&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Dto2&#39;</span><span class="p">:</span> <span class="mi">0</span>
+                  <span class="p">}</span>  <span class="c1"># linea 2</span>
+                         <span class="p">]</span>
+                <span class="p">,</span><span class="s2">&quot;Porte&quot;</span><span class="p">:{</span>
+                    <span class="s2">&quot;Importe&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Agencia&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+                   <span class="p">,</span><span class="s2">&quot;Tipo_Iva&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span> <span class="p">,</span><span class="s2">&quot;Tipo_Portes&quot;</span><span class="p">:</span> <span class="mi">1</span> <span class="c1"># 1 Debidos 2 Pagados</span>
+                   <span class="p">,</span><span class="s2">&quot;Iva_Incluido&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;Incluir_ProntoPago&quot;</span><span class="p">:</span> <span class="kc">False</span>
+                   <span class="p">,</span>  <span class="s2">&quot;Incluir_EnFactura&quot;</span><span class="p">:</span> <span class="kc">False</span>
+                          <span class="p">}</span>
+         <span class="p">}</span>
+</code></pre></div>
+
+
+</div>
+
+<h1 id="uso">Uso</h1>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>api50.pre_compra(documento)
+</code></pre></div>
+
+
+</div>
+
+<h1 id="codigo-ejemplo">Codigo Ejemplo</h1>
+<p><a href="https://github.com/wertyMSD/ejemplos_apiSAGE50/blob/master/documentos-compra.py" class="external-link">GitHub</a></p></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
 <ul>
-	<li><a class="backlink" href="../../pySage50e/Documentos Venta.html">documentos venta</a></li>
+	<li><a class="backlink" href="../../pySage50e/Documentos Compra.html">documentos compra</a></li>
 	<li><a class="backlink" href="../../index.html">index</a></li>
 </ul>
 </div>

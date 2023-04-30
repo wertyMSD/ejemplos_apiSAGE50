@@ -5,7 +5,7 @@
         <head>
                 <!-- Page information -->
                 <meta charset="UTF-8" />
-                <meta name="node_id" content="linea adicional con la descripcion larga">
+                <meta name="node_id" content="modelo registro documentos venta">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="shortcut icon" href="../../favicon.ico" />
 
@@ -47,7 +47,7 @@
 
                 <!-- Onload tweaks -->
                 <script>
-                        const CURRENT_NODE = 'linea adicional con la descripcion larga';
+                        const CURRENT_NODE = 'modelo registro documentos venta';
                         const HTML_URL_PREFIX = '../..';
                         const PAGE_DEPTH = 2;
                 </script>
@@ -208,16 +208,21 @@
 	<button id="folder-2" class="dir-button" onclick="toggle_dir(this.id)">1NOPUBLICAR</button>
 	<div id="folder-container-2" class="dir-container requires_js " path="../pySage50e/1NOPUBLICAR">
 		<ul class="dir-list">
-			<li><a class="" href="../pySage50e/1NOPUBLICAR/Albaran venta.html"  >Albaran venta</a></li>
 			<li><a class="" href="../pySage50e/1NOPUBLICAR/Documentacion SAGE tecnica.html"  >Documentacion SAGE tecnica</a></li>
-			<li><a class="" href="../pySage50e/1NOPUBLICAR/linea adicional con la descripcion larga.html"  >linea adicional con la descripcion larga</a></li>
 		</ul>
 	</div>
 	<button id="folder-3" class="dir-button" onclick="toggle_dir(this.id)">Documentos</button>
 	<div id="folder-container-3" class="dir-container requires_js " path="../pySage50e/Documentos">
 		<ul class="dir-list">
-			<li><a class="" href="../pySage50e/Documentos/Pedido Venta.html"  >Pedido Venta</a></li>
-			<li><a class="" href="../pySage50e/Documentos/Presupuesto Venta.html"  >Presupuesto Venta</a></li>
+			<li><a class="" href="../pySage50e/Documentos/Compras Albaran.html"  >Compras Albaran</a></li>
+			<li><a class="" href="../pySage50e/Documentos/Compras Pedido.html"  >Compras Pedido</a></li>
+			<li><a class="" href="../pySage50e/Documentos/Compras Presupuesto.html"  >Compras Presupuesto</a></li>
+			<li><a class="" href="../pySage50e/Documentos/Modelo Registro Documentos Compra.html"  >Modelo Registro Documentos Compra</a></li>
+			<li><a class="" href="../pySage50e/Documentos/Modelo Registro Documentos Venta.html"  >Modelo Registro Documentos Venta</a></li>
+			<li><a class="" href="../pySage50e/Documentos/Venta Albaran.html"  >Venta Albaran</a></li>
+			<li><a class="" href="../pySage50e/Documentos/Venta Factura.html"  >Venta Factura</a></li>
+			<li><a class="" href="../pySage50e/Documentos/Venta Pedido.html"  >Venta Pedido</a></li>
+			<li><a class="" href="../pySage50e/Documentos/Venta Presupuesto.html"  >Venta Presupuesto</a></li>
 		</ul>
 	</div>
 	<button id="folder-4" class="dir-button" onclick="toggle_dir(this.id)">Tablas</button>
@@ -292,50 +297,65 @@
                 <div style="width:100%; text-align: right;display: block;margin: 0.5rem;">
                     <div style="flex:1;display: none;"></div>
                     <div class="breadcrumbs" style="flex:1 ;padding: 0.5rem; width: fit-content;display: inline;border-radius: 0.2rem;">
-                        <a href="./" style="color: rgb(var(--normal-text-color));">Home</a> / <span style="color: #666;">pySage50e</span> / <span style="color: #666;">1NOPUBLICAR</span> / <a href="../../pySage50e/1NOPUBLICAR/linea adicional con la descripcion larga.html" >linea adicional con la descripcion larga</a>
+                        <a href="./" style="color: rgb(var(--normal-text-color));">Home</a> / <span style="color: #666;">pySage50e</span> / <span style="color: #666;">Documentos</span> / <a href="../../pySage50e/Documentos/Modelo Registro Documentos Venta.html" >Modelo Registro Documentos Venta</a>
                     </div>
                 </div>
-<embeddedtitle>linea adicional con la descripcion larga</embeddedtitle>
+<embeddedtitle>Modelo Registro Documentos Venta</embeddedtitle>
 <div class="content"><div class="toc">
-<ul></ul>
+<ul>
+<li><a href="#modelo-documento" class="anchor-link">Modelo Documento</a></li>
+</ul>
 </div>
-<p>Tiene que ver :<a href="../../pySage50e/1NOPUBLICAR/Albaran%20venta.html">Albaran venta</a>   </p>
-<div class="lang-IGES">
-``` IGES   
-//Añadimos linea adicional del documento de venta con la descripcion larga del producto   
-// en el caso que el cliente quiera poner comentarios de linea usaremos el campo de descripcion larga    
-// de las lineas de pedido para poner ese comentario y pasarlo a sage. Los comentarios en sage son    
-// lineas sin codigo de producto , tener en cuenta que hay que poner la dll de fecha 31/03/2021 o superior   
-tmpCodigoCabecera est un entier   
-HExécuteRequêteSQL(rq,cstNomConexioiGes,hRequêteSansCorrection,"SELECT 1 AS Procesar FROM Lineas WHERE Descripcion<>''")   
-HLitPremier(rq)   
-SI rq.Procesar=1 ALORS   
-    Linea est un entier=0   
-    HExécuteRequêteSQL(rq,cstNomConexioiGes,hRequêteSansCorrection,"SELECT * FROM Lineas ORDER BY CodigoCabecera,Linea")   
-    POUR TOUT rq   
-        SI rq.CodigoCabecera<>tmpCodigoCabecera ALORS   
-            tmpCodigoCabecera=rq.CodigoCabecera   
-            Linea=0   
-        FIN   
-        Linea++    
-        HExécuteRequêteSQL("ins",cstNomConexioiGes,hRequêteSansCorrection,"UPDATE Lineas SET Linea="+Linea+" WHERE CodigoRegistro="+rq.CodigoRegistro)   
-        SI rq.Descripcion<>"" ALORS   
-            Linea++   
-            InstruccionSQL est une chaîne=[   
-                INSERT INTO Lineas (CodigoCabecera,Linea,Titulo,CodigoRegistro)    
-                VALUES   
-                (%1,%2,'%3',(SELECT MAX(CodigoRegistro)+1 FROM Lineas))   
-            ]   
-            InstruccionSQL=ChaîneConstruit(InstruccionSQL,rq.CodigoCabecera,Linea,rq.Descripcion)   
-            HExécuteRequêteSQL("ins",cstNomConexioiGes,hRequêteSansCorrection,InstruccionSQL)   
-        FIN   
-    FIN   
-FIN</div>
+<p>Modificado : <code>$= dv.current().file.ctime</code>   </p>
+<h4 id="modelo-documento">Modelo Documento</h4>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="n">documento_venta</span><span class="o">=</span>
+<span class="w">         </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;Cabecera&quot;</span><span class="o">:</span><span class="p">{</span>
+<span class="w">                  </span><span class="p">&#39;</span><span class="n">Empresa</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;</span><span class="sc">&#39;,&#39;</span><span class="n">Numero</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="mh">0</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Serie</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;&#39;</span><span class="w">  </span>
+<span class="w">                  </span><span class="p">,&#39;</span><span class="n">Fecha</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;</span><span class="o">|</span><span class="mh">31</span><span class="o">-</span><span class="mh">12</span><span class="o">-</span><span class="mh">2023</span><span class="o">|</span><span class="p">&#39;</span><span class="w"> </span><span class="p">#</span><span class="n">opcional</span>
+
+<span class="w">                  </span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Cliente</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;&#39;</span><span class="w"> </span><span class="p">#</span><span class="n">obligatorio</span>
+<span class="w">                  </span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Env_Cli</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="mh">0</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Ruta</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;&#39;,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Entrega</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;</span><span class="o">|</span><span class="mh">31</span><span class="o">-</span><span class="mh">12</span><span class="o">-</span><span class="mh">2023</span><span class="o">|</span><span class="p">&#39;</span>
+<span class="w">                  </span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Vendedor</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;&#39;,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Obra</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;&#39;</span>
+<span class="w">                  </span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Observacio</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;&#39;,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Nota</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;&#39;</span>
+<span class="w">                  </span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Pronto_Pago</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="w">                  </span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Fpag</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;</span><span class="sc">&#39;,&#39;</span><span class="n">Tarifa</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;&#39;,</span><span class="s">&quot;Almacen&quot;</span><span class="o">:</span><span class="p">&#39;&#39;</span>
+<span class="w">                  </span><span class="p">,&#39;</span><span class="n">Libre_1</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;&#39;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Libre_2</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;&#39;,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Libre_3</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;&#39;</span>
+<span class="w">                            </span><span class="p">}</span>
+<span class="w">                </span><span class="p">,</span><span class="s">&quot;Lineas&quot;</span><span class="o">:</span><span class="p">[</span>
+<span class="w">                  </span><span class="p">{&#39;</span><span class="n">Articulo</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="sc">&#39;1&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Definicion</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;&#39;,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">CodigoTipoIVA</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;&#39;</span>
+<span class="w">                 </span><span class="p">,&#39;</span><span class="n">PorcentajeIVA</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;</span><span class="sc">&#39;,&#39;</span><span class="n">Cajas</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Unidades</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="w">                 </span><span class="p">,&#39;</span><span class="n">Talla</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;</span><span class="sc">&#39;,&#39;</span><span class="n">Color</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;&#39;,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Peso</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">PuntoVerde</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;&#39;</span>
+<span class="w">                 </span><span class="p">,</span><span class="s">&quot;lote&quot;</span><span class="o">:</span><span class="p">&#39;&#39;,</span><span class="s">&quot;FechaCaducidad&quot;</span><span class="o">:</span><span class="p">&#39;</span><span class="o">|</span><span class="mh">31</span><span class="o">-</span><span class="mh">12</span><span class="o">-</span><span class="mh">2023</span><span class="o">|</span><span class="p">&#39;</span>
+<span class="w">                 </span><span class="p">,&#39;</span><span class="n">PrecioIva</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="mh">0</span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Precio</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="mh">0</span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Dto1</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="mh">0</span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Dto2</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="mh">0</span>
+<span class="w">                  </span><span class="p">}</span><span class="w"> </span><span class="p">#</span><span class="n">linea</span><span class="w"> </span><span class="mh">1</span>
+<span class="w">                 </span><span class="p">,{&#39;</span><span class="n">Articulo</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="sc">&#39;1&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Definicion</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;</span><span class="n">hola</span><span class="w"> </span><span class="n">mundo</span><span class="p">&#39;</span>
+<span class="w">                 </span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">CodigoTipoIVA</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="m">&#39;0</span><span class="mh">0</span><span class="p">&#39;,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Cajas</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Unidades</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="w">                 </span><span class="p">,&#39;</span><span class="n">Talla</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;&#39;,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Color</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;&#39;,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Peso</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">PuntoVerde</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;&#39;</span>
+<span class="w">                 </span><span class="p">,</span><span class="w"> </span><span class="s">&quot;lote&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">&#39;&#39;,</span><span class="w"> </span><span class="s">&quot;FechaCaducidad&quot;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">&#39;</span><span class="o">|</span><span class="mh">31</span><span class="o">-</span><span class="mh">12</span><span class="o">-</span><span class="mh">2023</span><span class="o">|</span><span class="p">&#39;</span>
+<span class="w">                 </span><span class="p">,&#39;</span><span class="n">PrecioIva</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="mh">0</span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Precio</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="mh">0</span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Dto1</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="mh">0</span><span class="p">,</span><span class="w"> </span><span class="p">&#39;</span><span class="n">Dto2</span><span class="p">&#39;</span><span class="o">:</span><span class="w"> </span><span class="mh">0</span>
+<span class="w">                  </span><span class="p">}</span><span class="w">  </span><span class="p">#</span><span class="w"> </span><span class="n">linea</span><span class="w"> </span><span class="mh">2</span>
+<span class="w">                         </span><span class="p">]</span>
+<span class="w">                </span><span class="p">,</span><span class="s">&quot;Porte&quot;</span><span class="o">:</span><span class="p">{</span>
+<span class="w">                    </span><span class="s">&quot;Importe&quot;</span><span class="o">:</span><span class="w"> </span><span class="mh">0</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Agencia&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">                   </span><span class="p">,</span><span class="s">&quot;Tipo_Iva&quot;</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="p">,</span><span class="s">&quot;Tipo_Portes&quot;</span><span class="o">:</span><span class="w"> </span><span class="mh">1</span><span class="w"> </span><span class="p">#</span><span class="w"> </span><span class="mh">1</span><span class="w"> </span><span class="n">Debidos</span><span class="w"> </span><span class="mh">2</span><span class="w"> </span><span class="n">Pagados</span>
+<span class="w">                   </span><span class="p">,</span><span class="s">&quot;Iva_Incluido&quot;</span><span class="o">:</span><span class="w"> </span><span class="n">False</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Incluir_ProntoPago&quot;</span><span class="o">:</span><span class="w"> </span><span class="n">False</span>
+<span class="w">                   </span><span class="p">,</span><span class="w">  </span><span class="s">&quot;Incluir_EnFactura&quot;</span><span class="o">:</span><span class="w"> </span><span class="n">False</span>
+<span class="w">                          </span><span class="p">}</span>
+<span class="w">         </span><span class="p">}</span>
+</code></pre></div>
+
+
+</div></div>
 <div class="note-footer">
 <div class="backlinks">
 <h2>Backlinks</h2>
 <ul>
-	<li><a class="backlink" href="../../pySage50e/1NOPUBLICAR/Albaran venta.html">albaran venta</a></li>
+	<li><a class="backlink" href="../../pySage50e/Documentos/Venta Presupuesto.html">venta presupuesto</a></li>
+	<li><a class="backlink" href="../../pySage50e/Documentos/Venta Pedido.html">venta pedido</a></li>
+	<li><a class="backlink" href="../../pySage50e/Documentos/Venta Albaran.html">venta albaran</a></li>
+	<li><a class="backlink" href="../../pySage50e/Documentos/Venta Factura.html">venta factura</a></li>
 </ul>
 </div>
 
