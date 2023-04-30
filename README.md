@@ -13,7 +13,8 @@ Esta nueva versión de nuestra Interfaz de Programación de Aplicaciones (API) r
 https://wertymsd.github.io/ejemplos_apiSAGE50
 
 # Requisitos Previos
-
+    - SAGE50 version España
+    - Python 3.11
 
 
 # Comentarios
