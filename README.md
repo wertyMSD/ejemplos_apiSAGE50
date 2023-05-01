@@ -27,6 +27,7 @@ Los endpoints están disponibles a través de la API.
 Pueden ser acciones como recuperar una registro, actualizar un Contacto. Cada recurso tiene su propio punto final que se utiliza para recibir datos para un recurso en particular. 
 Los endpoints realizan una función específica, tomando un cierto número de parámetros y devolviendo datos.  
 
-#
+# Como usar en linea comandos
 
+![](E:\@github\ejemplos_apiSAGE50\lineacomandobasico.gif)
 
