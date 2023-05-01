@@ -5,19 +5,19 @@
         <head>
                 <!-- Page information -->
                 <meta charset="UTF-8" />
-                <meta name="node_id" content="index">
+                <meta name="node_id" content="compras albaran">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <link rel="shortcut icon" href="./favicon.ico" />
+                <link rel="shortcut icon" href="../../../favicon.ico" />
 
                 <!-- Set title -->
                 <title>api PySage50</title>
 
                 <!-- Includes -->
                 
-<script src="./obs.html/static/obsidian_core.js"></script>
-<script src="./obs.html/static/encoding.js"></script>
-<link rel="stylesheet" href="./obs.html/static/master.css" />
-<script src="./obs.html/static/mermaid.9.0.1.min.js"></script>
+<script src="../../../obs.html/static/obsidian_core.js"></script>
+<script src="../../../obs.html/static/encoding.js"></script>
+<link rel="stylesheet" href="../../../obs.html/static/master.css" />
+<script src="../../../obs.html/static/mermaid.9.0.1.min.js"></script>
 <script>
   MathJax = {
     loader: {
@@ -39,17 +39,17 @@
 <script type="text/javascript" id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
-<script src="./obs.html/static/flexsearch.bundle.js"></script>
-<script src="./obs.html/static/pako.js"></script>
-<script src="./obs.html/static/search.js"></script>
-<script src="./obs.html/static/dirtree.js"></script>
+<script src="../../../obs.html/static/flexsearch.bundle.js"></script>
+<script src="../../../obs.html/static/pako.js"></script>
+<script src="../../../obs.html/static/search.js"></script>
+<script src="../../../obs.html/static/dirtree.js"></script>
 
 
                 <!-- Onload tweaks -->
                 <script>
-                        const CURRENT_NODE = 'index';
-                        const HTML_URL_PREFIX = '.';
-                        const PAGE_DEPTH = 0;
+                        const CURRENT_NODE = 'compras albaran';
+                        const HTML_URL_PREFIX = '../../..';
+                        const PAGE_DEPTH = 3;
                 </script>
         </head>
 
@@ -107,7 +107,7 @@
         <div id="page_holder" class="flex_col">
                 <div id="header" class="header">
     <div id="header_flex" class="flex_row">
-            <a href="./index.html" id="homelink" title="Clear screen and go to homepage">api PySage50</a>
+            <a href="../../../index.html" id="homelink" title="Clear screen and go to homepage">api PySage50</a>
             <div id="menu_toggle_button" class="navbar-button requires_js" onclick="toggle_menu()">
                     ≡
             </div>
@@ -148,7 +148,7 @@
     }
 </script>
                                     <div onclick="openSearch()" class="theme-button requires_js">
-            <img src = "./obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
+            <img src = "../../../obs.html/static/search.svg" alt="Search notes" title="Search notes" style="margin: 4px;"/>
         </div>
         <script>
             function openSearch(){
@@ -175,8 +175,8 @@
                             
                             
                             <div>
-    <a href="./obs.html/tags/index.html" title="Open tag view">
-            <img src = "./obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
+    <a href="../../../obs.html/tags/index.html" title="Open tag view">
+            <img src = "../../../obs.html/static/hashtag.svg" alt="RSS Feed link" style="width: 24px; margin-left: -2px; margin-top: -2px;"/>
     </a>
 </div>
                             
@@ -209,140 +209,92 @@
                 <div style="width:100%; text-align: right;display: block;margin: 0.5rem;">
                     <div style="flex:1;display: none;"></div>
                     <div class="breadcrumbs" style="flex:1 ;padding: 0.5rem; width: fit-content;display: inline;border-radius: 0.2rem;">
-                        <a href="./" style="color: rgb(var(--normal-text-color));">Home</a>
+                        <a href="./" style="color: rgb(var(--normal-text-color));">Home</a> / <span style="color: #666;">..</span> / <span style="color: #666;">100_Proyectos</span> / <span style="color: #666;">pySage50e</span> / <span style="color: #666;">Documentos</span> / <a href="../../../100_Proyectos/pySage50e/Documentos/Compras Albaran.html" >Compras Albaran</a>
                     </div>
                 </div>
-<div class="content"><h1 id="vision-general">Visión general</h1>
+<embeddedtitle>Compras Albaran</embeddedtitle>
+<div class="content"><p>Modificado : <code>$= dv.current().file.mtime</code> <br />
+<a class="inline-tag" href="../../../obs.html/tags/compras/index.html">compras</a>   </p>
+<h1 id="generador-modelo">Generador Modelo</h1>
 <div class="toc">
 <ul>
-<li><a href="#vision-general" class="anchor-link">Visión general</a></li>
-<li><a href="#documentacion-sage" class="anchor-link">Documentacion SAGE</a><ul>
-<li><a href="#url-documentacion-api-net-sage" class="anchor-link">URL documentacion api .net SAGE</a></li>
+<li><a href="#generador-modelo" class="anchor-link">Generador Modelo</a><ul>
+<li><a href="#modelo-documento" class="anchor-link">Modelo Documento</a></li>
 </ul>
 </li>
-<li><a href="#requisitos-previos" class="anchor-link">Requisitos Previos</a><ul>
-<li><a href="#python-version-3-11" class="anchor-link">Python  version 3.11</a></li>
-<li><a href="#instalacion-de-la-libreria" class="anchor-link">Instalacion de la Libreria</a></li>
-<li><a href="#datos-sage50" class="anchor-link">Datos SAGE50</a></li>
-<li><a href="#datos-sql-base-datos-sage50" class="anchor-link">Datos SQL Base datos Sage50</a></li>
-</ul>
-</li>
-<li><a href="#comentarios" class="anchor-link">Comentarios</a></li>
-<li><a href="#endpoints" class="anchor-link">Endpoints</a></li>
-<li><a href="#recursos-api" class="anchor-link">Recursos Api</a><ul>
-<li><a href="#tablas-maestras" class="anchor-link">Tablas Maestras</a></li>
-<li><a href="#documentos" class="anchor-link">Documentos</a></li>
-</ul>
-</li>
-<li><a href="#comienzo-uso-rapido" class="anchor-link">Comienzo uso rapido</a></li>
-<li><a href="#codigo-python-ejemplo" class="anchor-link">Codigo Python ejemplo</a></li>
-<li><a href="#configuracion-configsql-ini" class="anchor-link">Configuracion configsql.ini</a></li>
-<li><a href="#contrato-de-uso-api" class="anchor-link">Contrato de Uso  API</a></li>
+<li><a href="#uso" class="anchor-link">Uso</a></li>
+<li><a href="#codigo-ejemplo" class="anchor-link">Codigo Ejemplo</a></li>
 </ul>
 </div>
-<p><em>BIENVENIDO A LA DOCUMENTACIÓN DE API PySage50e</em>   </p>
-<p>Esta nueva versión de nuestra Interfaz de Programación de Aplicaciones (API) representa un gran paso adelante. Es más potente y fácil de usar. Aquí encontrarás toda la orientación que necesitas para crear integraciones entre Sage50 españa y <a href="https://www.python.org/downloads/release/python-3113/" class="external-link" class="external-link">Python Release Python 3.11.3 | Python.org</a>     </p>
-<h1 id="documentacion-sage">Documentacion SAGE</h1>
-<h4 id="url-documentacion-api-net-sage">URL documentacion api .net SAGE</h4>
-<p><a href="http://descargas.sage.es/Sage50/Documentacion_html/html/" class="external-link">api dll sage Sage50: Página principal</a></p>
-<h1 id="requisitos-previos">Requisitos Previos</h1>
-<h4 id="python-version-3-11">Python  version 3.11</h4>
-<p><a href="https://www.python.org/downloads/release/python-3113/" class="external-link" class="external-link">Python Release Python 3.11.3 | Python.org</a>   </p>
-<div class="callout callout-error active" rasa="1">
-<div class="callout-title ">
-<div class="callout-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="callout-icon"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-</div>
-<div class="callout-title-name">Nota importante <br />
-</div>
-</div>
-<div class="callout-content">
-<p>**Python 3.11  no es compatible con Windows 7 o inferior</p>
-</div>
-</div>
-<h4 id="instalacion-de-la-libreria">Instalacion de la Libreria</h4>
-<div class="lang-terminal_windows">
+<div class="lang-general">
 
-<div class="codehilite"><pre><span></span><code>pip install apiSage50e
+<div class="codehilite"><pre><span></span><code>api50.alb_compra()
 </code></pre></div>
 
 
 </div>
 
-<p><em>Debe conocer y tener acceso desde su terminal a:</em>   </p>
-<h4 id="datos-sage50">Datos SAGE50</h4>
-<ul>
-<li>Ubicacion Teminal Sage50 para el <a href="./not_created.html" class="nonexistent-link">grupo de empresa</a>  a procesar   </li>
-<li>usuario_sage50   </li>
-<li>clave_sage50   </li>
-<li>empresa_sage50   </li>
-</ul>
-<h4 id="datos-sql-base-datos-sage50">Datos SQL Base datos Sage50</h4>
-<ul>
-<li>Direccion servidor MSSQL<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>   </li>
-<li>Nombre Usuario  MSSQL<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup>   </li>
-<li>Password MSSQL<sup id="fnref3:1"><a class="footnote-ref" href="#fn:1">1</a></sup>   </li>
-</ul>
-<h1 id="comentarios">Comentarios</h1>
-<p>Tu opinión es <em>importante</em>, dinos qué quieres <mark class="formatting_highlight">conseguir con esta API</mark> y te ayudamos con ello desde <a href="./not_created.html" class="nonexistent-link">Alcatic</a>.   </p>
-<h1 id="endpoints">Endpoints</h1>
-<p>La API PySage50e está diseñada en torno al concepto de recursos.   <br />
-Un "recurso" está relacionado con una entidad dentro de Sage50. <br />
-Es posible que ya conozcas estos recursos como Clientes, Articulos, Proveedores, Obras, etc.   <br />
-Los endpoints están disponibles a través de la API.  <br />
-Pueden ser acciones como recuperar una registro, actualizar un Contacto. Cada recurso tiene su propio punto final que se utiliza para recibir datos para un recurso en particular.  <br />
-Los endpoints realizan una función específica, tomando un cierto número de parámetros y devolviendo datos.     </p>
-<h1 id="recursos-api">Recursos Api</h1>
-<h2 id="tablas-maestras">Tablas Maestras</h2>
-<ul>
-<li><a href="./100_Proyectos/pySage50e/Tablas/maestras/Productos.html">Productos</a> 👍   </li>
-<li><a href="./100_Proyectos/pySage50e/Tablas/maestras/Clientes.html">Clientes</a> 👍   </li>
-<li><a href="./100_Proyectos/pySage50e/Tablas/maestras/Proveedores.html">Proveedores</a> 👍   </li>
-<li><a href="./100_Proyectos/pySage50e/Tablas/maestras/Obras.html">Obras</a> 👍   </li>
-</ul>
-<h2 id="documentos">Documentos</h2>
-<p><code>{_obsidian_pattern_tag_documentos/ventas}</code>   </p>
-<ul>
-<li><a href="./100_Proyectos/pySage50e/Documentos/Venta%20Presupuesto.html">Venta Presupuesto</a>   </li>
-<li><a href="./100_Proyectos/pySage50e/Documentos/Venta%20Pedido.html">Venta Pedido</a>   </li>
-<li><a href="./100_Proyectos/pySage50e/Documentos/Venta%20Albaran.html">Venta Albaran</a>   </li>
-<li><a href="./100_Proyectos/pySage50e/Documentos/Venta%20Factura.html">Venta Factura</a></li>
-</ul>
-<p><code>{_obsidian_pattern_tag_documentos/compras}</code>   </p>
-<ul>
-<li><a href="./100_Proyectos/pySage50e/Documentos/Compras%20Presupuesto.html">Compras Presupuesto</a>   </li>
-<li><a href="./100_Proyectos/pySage50e/Documentos/Compras%20Pedido.html">Compras Pedido</a>   </li>
-<li><a href="./100_Proyectos/pySage50e/Documentos/Compras%20Albaran.html">Compras Albaran</a>   </li>
-<li>~Factura No diponible~</li>
-</ul>
-<h1 id="comienzo-uso-rapido">Comienzo uso rapido</h1>
-<h1 id="codigo-python-ejemplo">Codigo Python ejemplo</h1>
+<h4 id="modelo-documento">Modelo Documento</h4>
 <div class="lang-py">
 
-<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">apiSage50</span>
-<span class="n">api50</span> <span class="o">=</span> <span class="n">apiSage50</span><span class="o">.</span><span class="n">apiSage50</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><code> <span class="n">documento_compra</span><span class="o">=</span>
+         <span class="p">{</span> <span class="s2">&quot;Cabecera&quot;</span><span class="p">:{</span>
+                  <span class="s1">&#39;Empresa&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;Numero&#39;</span><span class="p">:</span> <span class="mi">0</span> <span class="p">,</span> <span class="s1">&#39;Serie&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span>  
+                  <span class="p">,</span><span class="s1">&#39;Fecha&#39;</span><span class="p">:</span> <span class="s1">&#39;|31-12-2023|&#39;</span> <span class="c1">#opcional</span>
+
+                  <span class="p">,</span> <span class="s1">&#39;Proveedor&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span> <span class="c1">#obligatorio</span>
+                  <span class="p">,</span> <span class="s1">&#39;Env_Cli&#39;</span><span class="p">:</span> <span class="mi">0</span> <span class="p">,</span> <span class="s1">&#39;Ruta&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;Entrega&#39;</span><span class="p">:</span> <span class="s1">&#39;|31-12-2023|&#39;</span>
+                  <span class="p">,</span> <span class="s1">&#39;Vendedor&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;Obra&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span>
+                  <span class="p">,</span> <span class="s1">&#39;Observacio&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;Nota&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span>
+                  <span class="p">,</span> <span class="s1">&#39;Pronto_Pago&#39;</span><span class="p">:</span> <span class="mf">0.0</span>
+                  <span class="p">,</span> <span class="s1">&#39;Fpag&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;Tarifa&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s2">&quot;Almacen&quot;</span><span class="p">:</span><span class="s1">&#39;&#39;</span>
+                  <span class="p">,</span><span class="s1">&#39;Libre_1&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span> <span class="p">,</span> <span class="s1">&#39;Libre_2&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;Libre_3&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span>
+                            <span class="p">}</span>
+                <span class="p">,</span><span class="s2">&quot;Lineas&quot;</span><span class="p">:[</span>
+                  <span class="p">{</span><span class="s1">&#39;Articulo&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;Definicion&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;CodigoTipoIVA&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span>
+                 <span class="p">,</span><span class="s1">&#39;PorcentajeIVA&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;Cajas&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;Unidades&#39;</span><span class="p">:</span> <span class="mf">0.0</span>
+                 <span class="p">,</span><span class="s1">&#39;Talla&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;Color&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;Peso&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;PuntoVerde&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span>
+                 <span class="p">,</span><span class="s2">&quot;lote&quot;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s2">&quot;FechaCaducidad&quot;</span><span class="p">:</span><span class="s1">&#39;|31-12-2023|&#39;</span>
+                 <span class="p">,</span><span class="s1">&#39;PrecioIva&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Precio&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Dto1&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Dto2&#39;</span><span class="p">:</span> <span class="mi">0</span>
+                  <span class="p">}</span> <span class="c1">#linea 1</span>
+                 <span class="p">,{</span><span class="s1">&#39;Articulo&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;Definicion&#39;</span><span class="p">:</span> <span class="s1">&#39;hola mundo&#39;</span>
+                 <span class="p">,</span> <span class="s1">&#39;CodigoTipoIVA&#39;</span><span class="p">:</span> <span class="s1">&#39;00&#39;</span><span class="p">,</span> <span class="s1">&#39;Cajas&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;Unidades&#39;</span><span class="p">:</span> <span class="mf">0.0</span>
+                 <span class="p">,</span><span class="s1">&#39;Talla&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;Color&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;Peso&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;PuntoVerde&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span>
+                 <span class="p">,</span> <span class="s2">&quot;lote&quot;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s2">&quot;FechaCaducidad&quot;</span> <span class="p">:</span> <span class="s1">&#39;|31-12-2023|&#39;</span>
+                 <span class="p">,</span><span class="s1">&#39;PrecioIva&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Precio&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Dto1&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Dto2&#39;</span><span class="p">:</span> <span class="mi">0</span>
+                  <span class="p">}</span>  <span class="c1"># linea 2</span>
+                         <span class="p">]</span>
+                <span class="p">,</span><span class="s2">&quot;Porte&quot;</span><span class="p">:{</span>
+                    <span class="s2">&quot;Importe&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;Agencia&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+                   <span class="p">,</span><span class="s2">&quot;Tipo_Iva&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span> <span class="p">,</span><span class="s2">&quot;Tipo_Portes&quot;</span><span class="p">:</span> <span class="mi">1</span> <span class="c1"># 1 Debidos 2 Pagados</span>
+                   <span class="p">,</span><span class="s2">&quot;Iva_Incluido&quot;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span> <span class="s2">&quot;Incluir_ProntoPago&quot;</span><span class="p">:</span> <span class="kc">False</span>
+                   <span class="p">,</span>  <span class="s2">&quot;Incluir_EnFactura&quot;</span><span class="p">:</span> <span class="kc">False</span>
+                          <span class="p">}</span>
+         <span class="p">}</span>
 </code></pre></div>
 
 
 </div>
 
-<h1 id="configuracion-configsql-ini">Configuracion configsql.ini</h1>
-<blockquote>
-<p><strong>obsidian-html error:</strong> Could not find page Fichero configsql.ini.   </p>
-</blockquote>
-<h1 id="contrato-de-uso-api">Contrato de Uso  API</h1>
-<blockquote>
-<p><strong>obsidian-html error:</strong> Could not find page Contrato TRIAL.</p>
-</blockquote>
-<div class="footnote">
-<hr />
-<ol>
-<li id="fn:1">
-<p>(Datos generados con la configuracion habitual)&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 0 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 0 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:1" title="Jump back to footnote 0 in the text">&#8617;</a></p>
-</li>
-</ol>
-</div></div>
+<h1 id="uso">Uso</h1>
+<div class="lang-general">
+
+<div class="codehilite"><pre><span></span><code>api50.ped_compra(documento)
+</code></pre></div>
+
+
+</div>
+
+<h1 id="codigo-ejemplo">Codigo Ejemplo</h1>
+<p><a href="https://github.com/wertyMSD/ejemplos_apiSAGE50/blob/master/documentos-compra.py" class="external-link">GitHub</a></p></div>
 <div class="note-footer">
-<div class="backlinks" style="display:none"></div>
+<div class="backlinks">
+<h2>Backlinks</h2>
+<ul>
+	<li><a class="backlink" href="../../../100_Proyectos/pySage50e/Documentos Compra.html">documentos compra</a></li>
+	<li><a class="backlink" href="../../../index.html">index</a></li>
+</ul>
+</div>
 
 
 </div>
@@ -478,7 +430,7 @@ Los endpoints realizan una función específica, tomando un cierto número de pa
                 document.getElementById('right_pane_toggle_nav').addEventListener('click', handle_toggle_side_bar_button);
         </script>
 
-        <script src="./obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
+        <script src="../../../obs.html/static/load_dirtree_footer.js" type="text/javascript"></script>
 
         
 
