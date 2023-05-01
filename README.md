@@ -29,5 +29,5 @@ Los endpoints realizan una función específica, tomando un cierto número de pa
 
 # Como usar en linea comandos
 
-![](E:\@github\ejemplos_apiSAGE50\lineacomandobasico.gif)
+![](https://github.com/wertyMSD/ejemplos_apiSAGE50/blob/e443b83f1e676f695c65660fdf85c330e4ca4224/lineacomandobasico.gif)
 
